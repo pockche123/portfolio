@@ -1,15 +1,16 @@
-import Compositor from "./Compositor.js";
-import { Matrix } from "./Math.js";
-import TileCollider from "./TileCollider.js";
+import Compositor from './Compositor.js';
+import TileCollider from './TileCollider.js';
+import {Matrix} from './math.js';
 
-export default class Level{
+export default class Level {
     constructor() {
         this.gravity = 2000;
-        this.comp = new Compositor();
-        this.entities = new Set(); 
-        this.tiles = new Matrix();
-         this.tileCollider = new TileCollider(this.tiles)
 
+        this.comp = new Compositor();
+        this.entities = new Set();
+        this.tiles = new Matrix();
+
+        this.tileCollider = new TileCollider(this.tiles);
     }
 
     update(deltaTime) {
@@ -25,11 +26,4 @@ export default class Level{
             entity.vel.y += this.gravity * deltaTime;
         });
     }
-
-    // update(deltaTime) {
-    //     this.entities.forEach(entity => {
-    //         entity.update(deltaTime)
-    //         this.tileCollider.test(entity)
-    //     })
-    // }
 }

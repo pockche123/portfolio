@@ -1,4 +1,4 @@
-import TileResolver from "./TileResolver.js"
+import TileResolver from './TileResolver.js';
 
 export default class TileCollider {
     constructor(tileMatrix) {
@@ -20,7 +20,7 @@ export default class TileCollider {
             entity.pos.y, entity.pos.y + entity.size.y);
 
         matches.forEach(match => {
-            if (match.tile.name !== 'ground'  && match.tile.name !== 'chance') {
+            if (match.tile.name !== 'ground') {
                 return;
             }
 
@@ -51,11 +51,17 @@ export default class TileCollider {
         const matches = this.tiles.searchByRange(
             entity.pos.x, entity.pos.x + entity.size.x,
             y, y);
-
-        matches.forEach(match => {
+        
+          matches.forEach(match => {
             if (match.tile.name !== 'ground' && match.tile.name !== 'chance') {
                 return;
             }
+        
+
+        // matches.forEach(match => {
+        //     if (match.tile.name !== 'ground') {
+        //         return;
+        //     }
 
             if (entity.vel.y > 0) {
                 if (entity.pos.y + entity.size.y > match.y1) {
