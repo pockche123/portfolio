@@ -5,14 +5,26 @@ export function createBackgroundLayer(level, sprites) {
 
     const context = buffer.getContext('2d');
 
-    level.tiles.forEach((tile, x, y) => {
-        sprites.drawTile(tile.name, context, x, y);
-    });
+    function reload() {
+        level.tiles.forEach((tile, x, y) => {
+            if (tile.name == 'chance') {
+                sprites.drawAnim(tile.name, context, x, y, level.totalTime);
+            } else {
+                sprites.drawTile(tile.name, context, x, y);
+            }
+
+            // sprites.drawTile(tile.name, context, x, y);
+
+        });
+    }
 
     return function drawBackgroundLayer(context) {
+        reload()
         context.drawImage(buffer, 0, 0);
     };
 }
+
+
 
 export function createSpriteLayer(entities) {
     return function drawSpriteLayer(context) {

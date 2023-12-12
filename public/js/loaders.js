@@ -1,6 +1,6 @@
 import Level from './Level.js';
 import {createBackgroundLayer, createSpriteLayer} from './layers.js';
-
+import { createAnim } from './anim.js';
 import SpriteSheet from './SpriteSheet.js';
 
 export function loadImage(url) {
@@ -68,34 +68,73 @@ function createTiles(level, backgrounds) {
 }
 
 
-function loadSpriteSheet(name) {
+export function loadSpriteSheet(name) {
     return loadJSON(`/sprites/${name}.json`)
-    .then(sheetSpec => Promise.all([
-        sheetSpec,
-        loadImage(sheetSpec.imageURL),
-    ]))
-    .then(([sheetSpec, image]) => {
-        const sprites = new SpriteSheet(
-            image,
-            sheetSpec.tileW,
-            sheetSpec.tileH);
+        .then(sheetSpec => Promise.all([
+            sheetSpec,
+            loadImage(sheetSpec.imageURL),
+        ]))
+        .then(([sheetSpec, image]) => {
+            const sprites = new SpriteSheet(
+                image,
+                sheetSpec.tileW,
+                sheetSpec.tileH);
 
-        sheetSpec.tiles.forEach(tileSpec => {
-            sprites.defineTile(
-                tileSpec.name,
-                tileSpec.index[0],
-                tileSpec.index[1]);
-        });
+            if (sheetSpec.tiles) {
+                sheetSpec.tiles.forEach(tileSpec => {
+                    sprites.defineTile(
+                        tileSpec.name,
+                        tileSpec.index[0],
+                        tileSpec.index[1]);
+                });
+            }
 
-        return sprites;
-    });
+            if (sheetSpec.frames) {
+                sheetSpec.frames.forEach(frameSpec => {
+                    sprites.define(frameSpec.name, ...frameSpec.rect);
+                });
+            }
+
+            if (sheetSpec.animations) {
+                sheetSpec.animations.forEach(animSpec => {
+                    const animation = createAnim(animSpec.frames, animSpec.frameLen);
+                    sprites.defineAnim(animSpec.name, animation);
+                });
+            }
+
+            console.log("loaders.js line 105, sprites: " , sprites )
+
+            return sprites;
+        })
 }
-export function loadLevel(name) {
-    return Promise.all([
-        loadJSON(`/levels/${name}.json`),
 
-        loadSpriteSheet('overworld'),
-    ])
+// export function loadLevel(name) {
+//     return Promise.all([
+//         loadJSON(`/levels/${name}.json`),
+
+//         loadSpriteSheet('overworld'),
+//     ])
+//     .then(([levelSpec, backgroundSprites]) => {
+//         const level = new Level();
+
+//         createTiles(level, levelSpec.backgrounds);
+
+//         const backgroundLayer = createBackgroundLayer(level, backgroundSprites);
+//         level.comp.layers.push(backgroundLayer);
+
+//         const spriteLayer = createSpriteLayer(level.entities);
+//         level.comp.layers.push(spriteLayer);
+
+//         return level;
+//     });
+// }
+
+export function loadLevel(name) {
+    return loadJSON(`/levels/${name}.json`)
+    .then(levelSpec => Promise.all([
+        levelSpec,
+        loadSpriteSheet(levelSpec.spriteSheet),
+    ]))
     .then(([levelSpec, backgroundSprites]) => {
         const level = new Level();
 

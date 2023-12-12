@@ -14,7 +14,7 @@ Promise.all([
 .then(([mario, level]) => {
     mario.pos.set(64, 64);
 
-    level.comp.layers.push(createCollisionLayer(level));
+    // level.comp.layers.push(createCollisionLayer(level));
 
     level.entities.add(mario);
 
