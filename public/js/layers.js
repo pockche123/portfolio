@@ -7,7 +7,7 @@ export function createBackgroundLayer(level, sprites) {
 
     function reload() {
         level.tiles.forEach((tile, x, y) => {
-            if (tile.name == 'chance') {
+            if (sprites.animations.has(tile.name)) {
                 sprites.drawAnim(tile.name, context, x, y, level.totalTime);
             } else {
                 sprites.drawTile(tile.name, context, x, y);

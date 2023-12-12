@@ -38,7 +38,45 @@ export default class TileCollider {
         });
     }
 
-    checkY(entity) {
+    
+    // checkY(entity) {
+    //     let y;
+    //     if (entity.vel.y > 0) {
+    //         y = entity.pos.y + entity.size.y;
+    //     } else if (entity.vel.y < 0) {
+    //         y = entity.pos.y;
+    //     } else {
+    //         return;
+    //     }
+
+    //     const matches = this.tiles.searchByRange(
+    //         entity.pos.x, entity.pos.x + entity.size.x,
+    //         y, y);
+
+    //     matches.forEach(match => {
+    //         if (match.tile.type !== 'ground') {
+    //             return;
+    //         }
+
+    //         if (entity.vel.y > 0) {
+    //             if (entity.pos.y + entity.size.y > match.y1) {
+    //                 entity.pos.y = match.y1 - entity.size.y;
+    //                 entity.vel.y = 0;
+
+    //                 entity.obstruct(Sides.BOTTOM);
+    //             }
+    //         } else if (entity.vel.y < 0) {
+    //             if (entity.pos.y < match.y2) {
+    //                 entity.pos.y = match.y2;
+    //                 entity.vel.y = 0;
+
+    //                 entity.obstruct(Sides.TOP);
+    //             }
+    //         }
+    //     });
+    // }
+
+        checkY(entity) {
         let y;
         if (entity.vel.y > 0) {
             y = entity.pos.y + entity.size.y;
@@ -51,22 +89,18 @@ export default class TileCollider {
         const matches = this.tiles.searchByRange(
             entity.pos.x, entity.pos.x + entity.size.x,
             y, y);
-        
-          matches.forEach(match => {
+
+        matches.forEach(match => {
             if (match.tile.type !== 'ground') {
                 return;
             }
-        
-
-        // matches.forEach(match => {
-        //     if (match.tile.name !== 'ground') {
-        //         return;
-        //     }
 
             if (entity.vel.y > 0) {
                 if (entity.pos.y + entity.size.y > match.y1) {
                     entity.pos.y = match.y1 - entity.size.y;
                     entity.vel.y = 0;
+
+                    entity.obstruct('bottom')
                 }
             } else if (entity.vel.y < 0) {
                 if (entity.pos.y < match.y2) {
@@ -76,4 +110,43 @@ export default class TileCollider {
             }
         });
     }
+
+    // checkY(entity) {
+    //     let y;
+    //     if (entity.vel.y > 0) {
+    //         y = entity.pos.y + entity.size.y;
+    //     } else if (entity.vel.y < 0) {
+    //         y = entity.pos.y;
+    //     } else {
+    //         return;
+    //     }
+
+    //     const matches = this.tiles.searchByRange(
+    //         entity.pos.x, entity.pos.x + entity.size.x,
+    //         y, y);
+        
+    //       matches.forEach(match => {
+    //         if (match.tile.type !== 'ground') {
+    //             return;
+    //         }
+        
+
+    //     // matches.forEach(match => {
+    //     //     if (match.tile.name !== 'ground') {
+    //     //         return;
+    //     //     }
+
+    //         if (entity.vel.y > 0) {
+    //             if (entity.pos.y + entity.size.y > match.y1) {
+    //                 entity.pos.y = match.y1 - entity.size.y;
+    //                 entity.vel.y = 0;
+    //             }
+    //         } else if (entity.vel.y < 0) {
+    //             if (entity.pos.y < match.y2) {
+    //                 entity.pos.y = match.y2;
+    //                 entity.vel.y = 0;
+    //             }
+    //         }
+    //     });
+    // }
 }

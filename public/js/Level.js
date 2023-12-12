@@ -26,6 +26,5 @@ export default class Level {
         });
         
         this.totalTime += deltaTime
-        console.log("Level.js, line 29, totalTime: ", this.totalTime)
     }
 }
