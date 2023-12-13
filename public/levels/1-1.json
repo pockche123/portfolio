@@ -25,11 +25,13 @@
             ]
         },
         {
-            "tile":"bricks",
+            "tile": "bricks",
             "type": "ground",
-            "ranges":[
+            "ranges": [
                 [
-                    9, 6, 8
+                    9,
+                    6,
+                    8
                 ]
             ]
         },
@@ -57,7 +59,61 @@
                     12,
                     4
                 ]
+        
+            ]
+        },
+        {
+            "pattern" : "pipe-2h",
+            "ranges":[
+                [5, 5],
+                [10, 11],
+                [15, 11]
             ]
         }
-    ]
+    ],
+    "patterns": {
+        "pipe-2h": {
+            "backgrounds": [
+                {
+                    "tile": "pipe-insert-vert-left",
+                    "type": "ground",
+                    "ranges": [
+                        [
+                            21,
+                            10
+                        ]
+                    ]
+                },
+                {
+                    "tile": "pipe-insert-vert-right",
+                    "type": "ground",
+                    "ranges": [
+                        [
+                            22,
+                            10
+                        ]
+                    ]
+                },
+                {
+                    "tile": "pipe-vert-left",
+                    "type": "ground",
+                    "ranges": [
+                        [
+                            21,
+                            11
+                        ]
+                    ]
+                },
+                {
+                    "tile": "pipe-vert-right",
+                    "ranges": [
+                        [
+                            22,
+                            11
+                        ]
+                    ]
+                }
+            ]
+        }
+    }
 }
