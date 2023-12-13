@@ -54,8 +54,8 @@ export function createMario() {
         const runAnim = createAnim(['run-1', 'run-2', 'run-3'], 6);
         
         function routeFrame(mario) {
-            24.13 youtube video ep 8
-            if (!mario.jump.ready) {
+            // 24.13 youtube video ep 8
+            if (mario.jump.falling) {
                 return 'jump';
             }
 
