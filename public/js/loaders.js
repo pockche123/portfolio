@@ -111,7 +111,7 @@ function createTiles(level, backgrounds, patterns, offsetX=0, offsetY = 0) {
                 const derivedX = x + offsetX
                 const derivedY = y + offsetY
                 if (background.pattern) {
-                    const backgrounds = patterns[background.pattern].backgrounds;;
+                    const backgrounds = patterns[background.pattern].backgrounds;
                     createTiles(level, backgrounds, patterns, derivedX, derivedY)
                 } else {
                     level.tiles.set(x, y, {

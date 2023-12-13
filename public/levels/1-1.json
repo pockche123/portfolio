@@ -106,6 +106,7 @@
                 },
                 {
                     "tile": "pipe-vert-right",
+                    "type": "ground",
                     "ranges": [
                         [
                             22,
