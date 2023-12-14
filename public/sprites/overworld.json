@@ -111,7 +111,24 @@
         {
           "name":"bush-3",
           "index":[11, 11]
+        },
+        {
+          "name":"hill-1",
+          "index":[8, 10]
+        },
+        {
+          "name":"hill-3",
+          "index":[10, 10]
+        },
+        {
+          "name":"hill-4",
+          "index":[8, 11]
+        },
+        {
+          "name":"hill-5",
+          "index":[9, 10]
         }
+        
 
 
 
