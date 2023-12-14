@@ -1,29 +1,40 @@
+import TileResolver from './TileResolver.js'
 
-
-export function createBackgroundLayer(level, sprites) {
-    // const resolver = new TileResolver(tiles)
+export function createBackgroundLayer(level, tiles, sprites) {
+ const resolver = new TileResolver(tiles)
     const buffer = document.createElement('canvas');
     buffer.width = 500;
     buffer.height = 240;
 
     const context = buffer.getContext('2d');
 
-    function reload() {
-        level.tiles.forEach((tile, x, y) => {
-            if (sprites.animations.has(tile.name)) {
-                sprites.drawAnim(tile.name, context, x, y, level.totalTime);
-            } else {
-                sprites.drawTile(tile.name, context, x, y);
+  
+    function redraw(startIndex, endIndex)  {
+        context.clearRect(0, 0, buffer.width, buffer.height);
+
+        for (let x = startIndex; x <= endIndex; ++x) {
+            const col = tiles.grid[x];
+            if (col) {
+                col.forEach((tile, y) => {
+                    if (sprites.animations.has(tile.name)) {
+                        sprites.drawAnim(tile.name, context, x - startIndex, y, level.totalTime);
+                    } else {
+                        sprites.drawTile(tile.name, context, x - startIndex, y);
+                    }
+                });
             }
-
-            // sprites.drawTile(tile.name, context, x, y);
-
-        });
+        }
     }
 
-    return function drawBackgroundLayer(context) {
-        reload()
-        context.drawImage(buffer, 0, 0);
+    return function drawBackgroundLayer(context, camera) {
+        const drawWidth = resolver.toIndex(500);
+        const drawFrom = resolver.toIndex(0);
+        const drawTo = drawFrom + drawWidth;
+        redraw(drawFrom, drawTo);
+
+        context.drawImage(buffer,
+            0,
+            0);
     };
 }
 

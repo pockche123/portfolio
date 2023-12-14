@@ -85,6 +85,8 @@
                 ]
             }
     },
+
+    "layers":[{
         "tiles": [
         {
             "name": "sky",
@@ -109,6 +111,7 @@
                 ]
             ]
         },
+        
         {
             "name": "bricks",
             "type": "ground",
@@ -146,8 +149,13 @@
                 ]
         
             ]
-        },
-        {
+        }
+        
+    ]
+ }, 
+{
+    "tiles":[
+             {
             "pattern" : "pipe-2h",
             "ranges":[
                 [20, 9]
@@ -156,8 +164,14 @@
         {
             "pattern":"cloud-single",
             "ranges":[
-                [4, 2]
+                [4, 2],
+                [20, 4]
             ]
         }
+
     ]
+}
+
+
+]
 }
