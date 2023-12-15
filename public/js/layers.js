@@ -26,7 +26,7 @@ export function createBackgroundLayer(level, tiles, sprites) {
         }
     }
 
-    return function drawBackgroundLayer(context, camera) {
+    return function drawBackgroundLayer(context) {
         const drawWidth = resolver.toIndex(500);
         const drawFrom = resolver.toIndex(0);
         const drawTo = drawFrom + drawWidth;

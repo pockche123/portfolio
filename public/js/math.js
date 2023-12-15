@@ -37,4 +37,13 @@ export class Vec2 {
         this.x = x;
         this.y = y;
     }
+
+    
+    getX() {
+        return this.x;
+    }
+
+    setX(x) {
+        this.x = x; 
+    }
 }
