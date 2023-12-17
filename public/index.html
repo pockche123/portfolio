@@ -3,12 +3,23 @@
 <head>
     <title>Super Mario</title>
     <style>
+         @import url('https://fonts.cdnfonts.com/css/super-mario-256');
+
+         @font-face {
+  font-family: 'mario';
+  src: url('./assets/prstart.ttf') format('truetype');
+}
+
         body{
             background: black;
             margin: 0;
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
+            color: white;
+            font-family: 'mario', sans-serif;
+                                                
         }
 
         #screen{
@@ -19,8 +30,14 @@
         }
     </style>
     <script type="module" src="/js/main.js"></script>
+    <link rel="stylesheet" href="./img/prstart.ttf">
 </head>
 <body>
+    <div>
     <canvas id="screen" width="400" height="224"></canvas>
+     <h1>MARIO</h1>
+    </div>
+  
+    </div>
 </body>
 </html>

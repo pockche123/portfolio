@@ -2,6 +2,7 @@ import Timer from './Timer.js';
 import {loadLevel} from './loaders/level.js';
 import { createMario } from './entities.js';
 import {setupKeyboard} from './input.js';
+import Entity from './Entity.js';
 
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
@@ -9,6 +10,7 @@ const context = canvas.getContext('2d');
 Promise.all([
     createMario(),
     loadLevel('1-1'),
+
 ])
 .then(([mario, level]) => {
     mario.pos.set(64, 64);
@@ -17,7 +19,6 @@ Promise.all([
 
     console.log("mario pos: ", mario.pos)
 
-//  level.comp.layers.push(createCollisionLayer(level));
 
     level.entities.add(mario);
 
@@ -45,6 +46,9 @@ Promise.all([
         if (mario.pos.getX() < 0) {
             mario.pos.setX(390)
         }
+
+        
+        
     
 
         level.comp.draw(context);
