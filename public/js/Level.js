@@ -15,9 +15,9 @@ export default class Level {
     setCollisionGrid(matrix) {
         this.tileCollider = new TileCollider(matrix);
     }
-    update(deltaTime) {
+    update(deltaTime, audioBoard) {
         this.entities.forEach(entity => {
-            entity.update(deltaTime);
+            entity.update(deltaTime, this, audioBoard);
 
             entity.pos.x += entity.vel.x * deltaTime;
             this.tileCollider.checkX(entity);
