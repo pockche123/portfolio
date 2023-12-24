@@ -4,8 +4,8 @@ import { createMario } from './entities.js';
 import {setupKeyboard} from './input.js';
 import Entity from './Entity.js';
 import { createAudioLoader } from './loaders/audio.js';
-
-
+import { loadFont } from './loaders/font.js';
+import { createDashboardLayer } from './layers/dashboard.js';
 
 
 class AudioBoard{
@@ -34,9 +34,10 @@ async function main(canvas) {
     Promise.all([
         createMario(),
         loadLevel('1-1'),
+        loadFont()
 
     ])
-        .then(([mario, level]) => {
+        .then(([mario, level, font]) => {
             mario.pos.set(64, 64);
 
 
@@ -48,18 +49,16 @@ async function main(canvas) {
             loadAudio('/audio/jump.ogg')
                 .then(buffer => {
 
-                    console.log(buffer)
+                
                     audioBoard.addAudio('jump', buffer)
-                    audioBoard.playAudio('jump')
-                    // const source = audioContext.createBufferSource()
-                    // source.connect(audioContext.destination)
-                    // source.buffer = buffer; 
-                    // source.start(0)
+                    // audioBoard.playAudio('jump')
+                   
 
                 })
 
 
             level.entities.add(mario);
+            level.comp.layers.push(createDashboardLayer(font))
 
             const input = setupKeyboard(mario);
             input.listenTo(window);
@@ -82,11 +81,17 @@ async function main(canvas) {
                     mario.pos.setX(0)
         
                 }
+
+                //  console.log("mario position: ", mario.pos.get())
                 if (mario.pos.getX() < 0) {
                     mario.pos.setX(390)
                 }
 
+    
+
+
                 level.comp.draw(context);
+                // font.draw('A', context, 0, 0)
             }
 
             timer.start();
@@ -99,8 +104,8 @@ const canvas = document.getElementById('screen');
 
 
 const start = () => {
-    window.removeEventListener('click', start);
+    // window.removeEventListener('click', start);
     main(canvas);
 };
 
-window.addEventListener('click', start);
+window.addEventListener('load', start);

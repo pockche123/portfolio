@@ -22,6 +22,11 @@ export function loadFont() {
     .then(image => {
         const fontSprite = new SpriteSheet(image);
 
+        // fontSprite.define('A', 8, 16, 8, 8)
+
+
+        // return fontSprite; 
+
         const size = 8;
         const rowLen = image.width;
         for (let [index, char] of [...CHARS].entries()) {

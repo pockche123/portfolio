@@ -1,10 +1,21 @@
+export function createEntityLayer(entities) {
+    return function drawBoundingBox(context) {
+          context.strokeStyle = 'red';
+        entities.forEach(entity => {
+            context.beginPath();
+            context.rect(
+                entity.pos.x, entity.pos.y,
+                entity.size.x, entity.size.y);
+            context.stroke();
+        });
+    }
+}
 
 
+function createTileCandidateLayer(tileCollider) {
+        const resolvedTiles = [];
 
-export function createCollisionLayer(level) {
-    const resolvedTiles = [];
-
-    const tileResolver = level.tileCollider.tiles;
+    const tileResolver = tileCollider.tiles;
     const tileSize = tileResolver.tileSize;
 
     const getByIndexOriginal = tileResolver.getByIndex;
@@ -12,9 +23,8 @@ export function createCollisionLayer(level) {
         resolvedTiles.push({x, y});
         return getByIndexOriginal.call(tileResolver, x, y);
     }
-
-    return function drawCollision(context) {
-        context.strokeStyle = 'blue';
+    return function drawTileCandidates(context) {
+              context.strokeStyle = 'blue';
         resolvedTiles.forEach(({x, y}) => {
             context.beginPath();
             context.rect(
@@ -23,16 +33,21 @@ export function createCollisionLayer(level) {
                 tileSize, tileSize);
             context.stroke();
         });
-
-        context.strokeStyle = 'red';
-        level.entities.forEach(entity => {
-            context.beginPath();
-            context.rect(
-                entity.pos.x, entity.pos.y,
-                entity.size.x, entity.size.y);
-            context.stroke();
-        });
-
+        
         resolvedTiles.length = 0;
+    }
+}
+
+export function createCollisionLayer(level) {
+
+    const drawTileCandidates= createTileCandidateLayer(level.tileCollider)
+    const drawBoundingBoxes = createEntityLayer(level.entities);
+
+    return function drawCollision(context) {
+
+        drawTileCandidates(context)
+        drawBoundingBoxes(context)
+
+
     };
 }

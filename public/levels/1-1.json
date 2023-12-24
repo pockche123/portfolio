@@ -262,15 +262,20 @@
                     "type": "ground",
                     "ranges": [
                         [
-                            9,
-                            6,
+                            10,
+                            2,
+                            8
+                        ],
+                        [
+                            13,
+                            2,
                             8
                         ]
                     ]
                 },
                 {
                     "name": "chance",
-                    "type": "ground",
+                    "type": "chance",
                     "ranges": [
                         [
                             9,
