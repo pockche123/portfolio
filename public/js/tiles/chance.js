@@ -62,9 +62,46 @@ export function createDashboardLayer(font) {
                         y2: 144
                     }
 
+                    const chance2 = {
+                        x1: 144, x2: 160, y1: 128, y2: 144
+                    }
+                    const chance3 = {
+                        x1: 192, x2: 208, y1: 128, y2: 144
+                    }
+
+                    const chance4 = {
+                        x1: 240, x2: 256, y1: 128, y2: 144
+                    }
+                    const chance5 = {
+ x1: 192, x2: 208, y1: 64, y2: 80
+                    }
+
                     if (match.x1 == chance1.x1 && match.x2 == chance1.x2 && match.y1 == chance1.y1) {
-                        const aboutLink = document.getElementById('about-link'); 
-                        aboutLink.style.display = (aboutLink.style.display === 'block') ? 'none' : 'block';
+                        const link = document.getElementById('about-link'); 
+                        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+            
+                    } 
+
+                   if (match.x1 == chance2.x1 && match.x2 == chance2.x2 && match.y1 == chance2.y1) {
+                        const link = document.getElementById('education-link'); 
+                        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+            
+                    }
+                        if (match.x1 == chance3.x1 && match.x2 == chance3.x2 && match.y1 == chance3.y1) {
+                        const link = document.getElementById('skills-link'); 
+                        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+            
+                    }
+
+                             if (match.x1 == chance4.x1 && match.x2 == chance4.x2 && match.y1 == chance4.y1) {
+                        const link = document.getElementById('portfolio-link'); 
+                        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
+            
+                    }
+
+                                   if (match.x1 == chance5.x1 && match.x2 == chance5.x2 && match.y1 == chance5.y1) {
+                        const link = document.getElementById('socials-link'); 
+                        link.style.display = (link.style.display === 'block') ? 'none' : 'block';
             
                     }
                     
