@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Super Mario</title>
     <style>
-         @import url('https://fonts.cdnfonts.com/css/super-mario-256');
+        @import url('https://fonts.cdnfonts.com/css/super-mario-256');
 
-         @font-face {
-  font-family: 'mario';
-  src: url('./assets/prstart.ttf') format('truetype');
-}
+        @font-face {
+            font-family: 'mario';
+            src: url('./assets/prstart.ttf') format('truetype');
+        }
 
-        body{
+        body {
             background: black;
             margin: 0;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             color: white;
             font-family: 'mario', sans-serif;
-                                                
+            
+
         }
 
-        #screen{
+        #screen-container{
+            position: relative;
+        }
+
+        #about-link{
+            position: absolute; 
+            bottom: 50%; 
+            left: 10%; 
+            z-index: 1; 
+            text-decoration: none;
+            color: white;
+            display: none;
+            transition: 0.5s ease-in-out;
+        }
+
+
+        #screen {
             margin-top: 2em;
             height: 95vh;
             margin: auto;
             display: block;
         }
+
+        #skills {
+            padding: 2em;
+            margin-top: 100vh;
+        }
     </style>
     <script type="module" src="/js/main.js"></script>
     <link rel="stylesheet" href="./img/prstart.ttf">
 </head>
+
 <body>
-    <div>
-    <canvas id="screen" width="400" height="224"></canvas>
-     <h1>MARIO</h1>
-    </div>
-  
-    </div>
+       <div id="screen-container">
+        <canvas id="screen" width="400" height="224"></canvas>
+        <a id="about-link" href="#about"><h3>About</h3></a>
+        </div>
+        <section class="info">
+            <div id="about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus unde laboriosam ratione suscipit
+                    quidem ad totam ea quaerat odio, rerum porro molestias maiores voluptas voluptatem illo enim
+                    corrupti dolores sequi.</p>
+            </div>
+        </section>
+
 
 </body>
+
+<script>
+        // JavaScript for smooth scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
 </html>

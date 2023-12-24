@@ -5,7 +5,7 @@ import {setupKeyboard} from './input.js';
 import Entity from './Entity.js';
 import { createAudioLoader } from './loaders/audio.js';
 import { loadFont } from './loaders/font.js';
-import { createDashboardLayer } from './layers/dashboard.js';
+import { createDashboardLayer } from './tiles/chance.js';
 
 
 class AudioBoard{
