@@ -1,91 +1,111 @@
-import {  loadLevel } from "./helper/loaders.js";
-import {loadBackgroundSprites } from "./helper/Sprites.js";
-import { createMario } from "./utilities/createEntities.js";
-import Timer from "./helper/timer.js";
-import Keyboard from "./helper/KeyboardState.js";
-import { createCollisionLayer } from "./helper/layers.js";
-import { setupKeyboard } from "./helper/input.js";
-
-const canvas = document.getElementById('screen')
-const context = canvas.getContext('2d');
+import Timer from './Timer.js';
+import {loadLevel} from './loaders/level.js';
+import { createMario } from './entities.js';
+import {setupKeyboard} from './input.js';
+import Entity from './Entity.js';
+import { createAudioLoader } from './loaders/audio.js';
+import { loadFont } from './loaders/font.js';
+import { createDashboardLayer } from './tiles/chance.js';
 
 
-
-Promise.all([
-    createMario(),
-    loadLevel('1-1'),
-])
-    .then(([mario, level]) => {
-
-      
-          mario.pos.set(64, 180)
-        //   mario.pos.set(64, 64);
-
-
-        
-    level.comp.layers.push(createCollisionLayer(level));
-
-    level.entities.add(mario);
-
-    const input = setupKeyboard(mario);
-    input.listenTo(window);
-
-    ['mousedown', 'mousemove'].forEach(eventName => {
-        canvas.addEventListener(eventName, event => {
-            if (event.buttons === 1) {
-                mario.vel.set(0, 0);
-                mario.pos.set(event.offsetX, event.offsetY);
-            }
-        });
-    });
-        
-         canvas.addEventListener('contextmenu', event => {
-        event.preventDefault();
-    });
-
-
-    const timer = new Timer(1/60);
-    timer.update = function update(deltaTime) {
-        level.update(deltaTime);
-
-        level.comp.draw(context);
+class AudioBoard{
+    constructor(context) {
+        this.context = context;
+        this.buffers = new Map();
+    
     }
 
-    timer.start();
+    addAudio(name, buffer) {
+        this.buffers.set(name, buffer);
+    }
 
-    //     level.entities.add(mario)
+    playAudio(name) {
+        const source = this.context.createBufferSource()
+        source.connect(this.context.destination)
+        source.buffer = this.buffers.get(name)
+        source.start(0)
+    }
 
+}
+
+async function main(canvas) {
+    const context = canvas.getContext('2d');
+
+    Promise.all([
+        createMario(),
+        loadLevel('1-1'),
+        loadFont()
+
+    ])
+        .then(([mario, level, font]) => {
+            mario.pos.set(64, 64);
+
+
+
+            // console.log("mario pos: ", mario.pos)
+            const audioContext = new AudioContext()
+            const audioBoard = new AudioBoard(audioContext)
+            const loadAudio = createAudioLoader(audioContext);
+            loadAudio('/audio/jump.ogg')
+                .then(buffer => {
+
+                
+                    audioBoard.addAudio('jump', buffer)
+                    // audioBoard.playAudio('jump')
+                   
+
+                })
+
+
+            level.entities.add(mario);
+            level.comp.layers.push(createDashboardLayer(font))
+
+            const input = setupKeyboard(mario);
+            input.listenTo(window);
+
+            // ['mousedown', 'mousemove'].forEach(eventName => {
+            //     canvas.addEventListener(eventName, event => {
+            //         if (event.buttons === 1) {
+            //             mario.vel.set(0, 0);
+            //             mario.pos.set(event.offsetX, event.offsetY);
+            //         }
+            //     });
+            // });
+
+
+            const timer = new Timer(1 / 60);
+            timer.update = function update(deltaTime) {
+                level.update(deltaTime, audioBoard);
+
+                if (mario.pos.getX() > 390) {
+                    mario.pos.setX(0)
         
-    // const SPACE = 32;
-    // const input = new Keyboard();
-    // input.addMapping(SPACE, keyState => {
-    //     if (keyState) {
-    //         mario.jump.start();
-    //     } else {
-    //         mario.jump.cancel();
-    //     }
-    // });
-    //     input.listenTo(window);
-        
-    //     ['mousedown', 'mousemove'].forEach(eventName => {
-    //         canvas.addEventListener(eventName, event => {
-    //             if (event.buttons === 1) {
-    //                 mario.vel.set(0, 0)
-    //                 mario.pos.set(event.offsetX, event.offsetY)
-    //             }
-    //         })
-    //     })
+                }
+
+                //  console.log("mario position: ", mario.pos.get())
+                if (mario.pos.getX() < 0) {
+                    mario.pos.setX(390)
+                }
+
+    
 
 
-    //     const timer = new Timer(1 / 60)
-    //     timer.update = function update(deltaTime) {
-    //         level.comp.draw(context)
-    //         level.update(deltaTime)
-    //             // comp.draw(context)
-    //             // mario.update(deltaTime)
-    //             mario.vel.y += gravity * deltaTime
-           
-    //     }
-    //     timer.start()
-    })
+                level.comp.draw(context);
+                // font.draw('A', context, 0, 0)
+            }
 
+            timer.start();
+        });
+
+}
+
+
+const canvas = document.getElementById('screen');
+
+
+const start = () => {
+    // window.removeEventListener('click', start);
+    main(canvas);
+};
+
+window.addEventListener('load', start);

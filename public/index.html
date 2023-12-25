@@ -1,14 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/super-mario-256');
+
+        @font-face {
+            font-family: 'mario';
+            src: url('./assets/prstart.ttf') format('truetype');
+        }
+
+        body {
+            background: black;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'mario', sans-serif;
+            
+
+        }
+
+        #screen-container{
+            position: relative;
+        }
+
+        #about-link, #education-link, #skills-link, #portfolio-link, #socials-link{
+            position: absolute; 
+            z-index: 1; 
+            text-decoration: none;
+            color: white;
+            display: none;
+        }
+
+        #about-link{
+            bottom: 50%; 
+            left: 11%; 
+        }
+
+        #education-link{
+            bottom: 45%; 
+            left: 33%; 
+        }
+
+        #skills-link{
+            bottom: 51%; 
+            left: 47%; 
+        }
+
+        #portfolio-link{
+            bottom: 45%; 
+            left: 57%; 
+
+        }
+        #socials-link{
+            bottom: 75%; 
+            left: 46%; 
+        }
+
+        #screen {
+            margin-top: 2em;
+            height: 95vh;
+            margin: auto;
+            display: block;
+        }
+
+      
+
+        .info{
+            padding: 2em;
+            /* margin-top: 100vh; */
+        }
+    </style>
     <script type="module" src="/js/main.js"></script>
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="./img/prstart.ttf">
 </head>
+
 <body>
-    <canvas id="screen" width="1080" height="960"></canvas>
-    
+       <div id="screen-container">
+        <canvas id="screen" width="400" height="224"></canvas>
+        <a id="about-link" href="#about"><h3>About</h3></a>
+        <a id="education-link" href="#education"><h3>Education</h3></a>
+        <a id="skills-link" href="#skills"><h3>Skills</h3></a>
+        <a id="portfolio-link" href="#portfolio"><h3>Portfolio</h3></a>
+        <a id="socials-link" href="#socials"><h3>Socials</h3></a>
+     
+        </div>
+        <section class="info">
+            <div id="about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus unde laboriosam ratione suscipit
+                    quidem ad totam ea quaerat odio, rerum porro molestias maiores voluptas voluptatem illo enim
+                    corrupti dolores sequi.</p>
+            </div>
+            <div id="education"><h2>Education</h2></div>
+            <div id="skills"><h2>Skills</h2></div>
+            <div id="portfolio"><h2>Portfolio</h2></div>
+            <div id="socials"><h2>Socials</h2></div>
+             
+        </section>
+
+
 </body>
+
+<script>
+        // JavaScript for smooth scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
 </html>
