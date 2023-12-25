@@ -87,7 +87,7 @@ export function createDashboardLayer(font) {
                         link.style.display = (link.style.display === 'block') ? 'none' : 'block';
             
                     }
-                        if (match.x1 == chance3.x1 && match.x2 == chance3.x2 && match.y1 == chance3.y1) {
+                        if (match.x1 >= 190 && match.x2 == chance3.x2 && match.y1 == chance3.y1) {
                         const link = document.getElementById('skills-link'); 
                         link.style.display = (link.style.display === 'block') ? 'none' : 'block';
             
