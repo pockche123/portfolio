@@ -5,10 +5,16 @@
     <title>Super Mario</title>
     <style>
         @import url('https://fonts.cdnfonts.com/css/super-mario-256');
+        @import url('https://fonts.cdnfonts.com/css/pretendo');
 
         @font-face {
             font-family: 'mario';
             src: url('./assets/prstart.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'nintendo';
+            src: url('./assets/nintendo.ttf') format('opentype');
         }
 
         body {
@@ -20,45 +26,51 @@
             justify-content: center;
             color: white;
             font-family: 'mario', sans-serif;
-            
+            font-size: large;
 
         }
 
-        #screen-container{
+        #screen-container {
             position: relative;
         }
 
-        #about-link, #education-link, #skills-link, #portfolio-link, #socials-link{
-            position: absolute; 
-            z-index: 1; 
+        #about-link,
+        #education-link,
+        #skills-link,
+        #portfolio-link,
+        #socials-link {
+            position: absolute;
+            z-index: 1;
             text-decoration: none;
             color: white;
             display: none;
+            font-family: 'mario', sans-serif;
         }
 
-        #about-link{
-            bottom: 50%; 
-            left: 11%; 
+        #about-link {
+            bottom: 50%;
+            left: 11%;
         }
 
-        #education-link{
-            bottom: 45%; 
-            left: 33%; 
+        #education-link {
+            bottom: 45%;
+            left: 33%;
         }
 
-        #skills-link{
-            bottom: 51%; 
-            left: 47%; 
+        #skills-link {
+            bottom: 51%;
+            left: 47%;
         }
 
-        #portfolio-link{
-            bottom: 45%; 
-            left: 57%; 
+        #portfolio-link {
+            bottom: 45%;
+            left: 57%;
 
         }
-        #socials-link{
-            bottom: 75%; 
-            left: 46%; 
+
+        #socials-link {
+            bottom: 75%;
+            left: 46%;
         }
 
         #screen {
@@ -69,68 +81,129 @@
         }
 
 
-        #about{
+        #about {
             min-height: 100vh;
         }
 
-      
+        .education-card {
+            display: flex;
+            flex-direction: column;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        .info{
+
+
+        .info {
             padding: 2em;
             /* margin-top: 100vh; */
         }
     </style>
     <script type="module" src="/js/main.js"></script>
-    <link rel="stylesheet" href="./img/prstart.ttf">
+    <!-- <link rel="stylesheet" href="./img/prstart.ttf"> -->
 </head>
 
 <body>
-       <div id="screen-container">
+    <div id="screen-container">
         <canvas id="screen" width="400" height="224"></canvas>
-        <a id="about-link" href="#about"><h3>About</h3></a>
-        <a id="education-link" href="#education"><h3>Education</h3></a>
-        <a id="skills-link" href="#skills"><h3>Skills</h3></a>
-        <a id="portfolio-link" href="#portfolio"><h3>Portfolio</h3></a>
-        <a id="socials-link" href="#socials"><h3>Socials</h3></a>
-     
-        </div>
-        <section class="info">
-            <article id="about">
-                <h2>About</h2>
-                <div>
-                    <label>Hello,</label>
-                    <p>my name is Parjal Rai.</p>
-                    <p>I am a full-stack developer and a tech enthusiast, navigating innovations's ebb and flow.</p>
-                    <img src="./img/profile-pic2.jpg" alt="profile-pic">
-                </div>
-   
-            </article>
-            <article id="education">
-                <h2>Education</h2>
+        <a id="about-link" href="#about">
+            <h3>About</h3>
+        </a>
+        <a id="education-link" href="#education">
+            <h3>Education</h3>
+        </a>
+        <a id="skills-link" href="#skills">
+            <h3>Skills</h3>
+        </a>
+        <a id="portfolio-link" href="#portfolio">
+            <h3>Portfolio</h3>
+        </a>
+        <a id="socials-link" href="#socials">
+            <h3>Socials</h3>
+        </a>
 
-            </article>
-            <article id="skills"><h2>Skills</h2></article>
-            <article id="portfolio"><h2>Portfolio</h2></article>
-            <article id="socials"><h2>Socials</h2></article>
-             
-        </section>
+    </div>
+    <section class="info">
+        <article id="about">
+            <h2>About</h2>
+            <div>
+                <label>Hello,</label>
+                <h1>I am Parjal Rai.</h1>
+                <p>I am a full-stack developer and a tech enthusiast, navigating innovations's ebb and flow.</p>
+                <img src="./img/profile-pic4.jpg" alt="profile-pic">
+            </div>
+
+        </article>
+        <article id="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <p>2023-2024</p>
+                    <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
+                    <ul>
+                        <li>Acquired comprehensive knowledge and hands-on experience in full stack development, spanning
+                            front-end technologies (HTML, CSS, React) to back-end technologies (Node.js, Express,
+                            databases).</li>
+                        <li>Demonstrated competence in utilizing Git, version control, and containerization,
+                            contributing to the collaborative development of projects during dedicated Learn and Project
+                            Weeks.</li>
+                        <li>Applied problem-solving skills through debugging assignments, participating in hackathons,
+                            and delivering impactful project presentations</li>
+                    </ul>
+                </div>
+                <div class="education-card">
+                    <p>2023-2023</p>
+                    <div>
+                        <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp , Remote </b>
+                        <ul>
+                            <li>🚀 Developed and maintained pixel-perfect, mobile-friendly web pages, ensuring optimal
+                                user experience across various devices.</li>
+                            <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
+                                high-quality, interactive features.</li>
+                            <li> &#9989; Pass rate with over 90% on assessments.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <p>2016-2020</p>
+                    <b>University of Glasgow, School of Life Sciences, Glasgow</b>
+                    <ul>
+                        <li>Bachelor of Science in Zoology, 2.1 achieved.</li>
+                        <li>Utilized R-Studio and applied experimental design principles to perform statistical analysis
+                            and generate illustrative data representations in a study focused on the impact of circadian
+                            disruption on aging.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </article>
+        <article id="skills">
+            <h2>Skills</h2>
+        </article>
+        <article id="portfolio">
+            <h2>Portfolio</h2>
+        </article>
+        <article id="socials">
+            <h2>Socials</h2>
+        </article>
+
+    </section>
 
 
 </body>
 
 <script>
-        // JavaScript for smooth scroll
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+    // JavaScript for smooth scroll
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
-    </script>
+    });
+</script>
 
 </html>
