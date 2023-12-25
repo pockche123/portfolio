@@ -28,7 +28,7 @@ class AudioBoard{
 
 }
 
-async function main(canvas) {
+const canvas = document.getElementById('screen');
     const context = canvas.getContext('2d');
 
     Promise.all([
@@ -97,15 +97,8 @@ async function main(canvas) {
             timer.start();
         });
 
-}
 
 
-const canvas = document.getElementById('screen');
 
 
-const start = () => {
-    // window.removeEventListener('click', start);
-    main(canvas);
-};
 
-window.addEventListener('load', start);
