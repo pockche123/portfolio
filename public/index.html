@@ -17,8 +17,8 @@
             src: url('./assets/nintendo.ttf') format('opentype');
         }
 
-        @font-face{
-            font-family: 'pixel'; 
+        @font-face {
+            font-family: 'pixel';
             src: url('./assets/VT323-Regular.ttf') format('truetype')
         }
 
@@ -95,42 +95,68 @@
             flex-direction: row;
             /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
             font-family: 'pixel', sans-serif;
-            font-size: 21px; 
+            font-size: 21px;
+            padding: 1em;
         }
-        .education-container{
+
+        .education-container {
             display: flex;
             flex-direction: column;
         }
 
-        #music-app-image{
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #music-app-image {
             width: 100%;
 
         }
-        .portfolio-container{
-            display: flex; 
-             flex-wrap: wrap;
+
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
         }
 
-        .portfolio-card{
-             flex-basis: calc(48% - 0.6rem); /* Adjust the value accordingly */
-    margin: 1.2rem; 
-    background-color: gainsboro;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        .portfolio-card {
+            flex-basis: calc(48% - 0.6rem);
+            /* Adjust the value accordingly */
+            margin: 1.2rem;
+            background-color: gainsboro;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
- 
-        }
-        
-        .portfolio-image{
-               transition: 0.3s ease-in-out;
+
         }
 
-        .portfolio-image:hover{
+        .education-card p {
+            width: 13%;
+        }
+
+        .portfolio-image {
+            transition: 0.3s ease-in-out;
+        }
+
+        .portfolio-image:hover {
             transform: scale(1.03);
         }
 
- 
+        .education-card-details {
+            width: 90%;
+        }
+
+        .portfolio-video {
+            width: 100%;
+
+            object-fit: cover;
+        }
+
+
 
 
         .info {
@@ -178,22 +204,56 @@
             <div class="education-container">
                 <div class="education-card">
                     <p>Oct 2023- Jan 2024</p>
-                    <div>
-                    <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
-                    <ul>
-                        <li>Acquired comprehensive knowledge and hands-on experience in full stack development, spanning
-                            front-end technologies (HTML, CSS, React) to back-end technologies (Node.js, Express,
-                            databases).</li>
-                        <li>Demonstrated competence in utilizing Git, version control, and containerization,
-                            contributing to the collaborative development of projects during dedicated Learn and Project
-                            Weeks.</li>
-                        <li>Applied problem-solving skills through debugging assignments, participating in hackathons,
-                            and delivering impactful project presentations</li>
-                    </ul>
+                    <div class="education-card-details">
+                        <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
+                        <ul>
+                            <li>📘 Acquired comprehensive knowledge and hands-on experience in full stack development,
+                                spanning front-end technologies (HTML, CSS, React) to back-end technologies (Node.js,
+                                Express, databases).</li>
+                            <li>🛠 Demonstrated competence in utilizing Git, version control, and containerization,
+                                contributing to the collaborative development of projects during dedicated Learn and
+                                Project Weeks.</li>
+                            <li>🔍 Applied problem-solving skills through debugging assignments, participating in
+                                hackathons, and delivering impactful project presentations.</li>
+                        </ul>
+
                     </div>
                 </div>
                 <div class="education-card">
                     <p>Jul 2023- Sep 2023</p>
+                    <div class="education-card-details">
+                        <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp, Remote </b>
+                        <ul>
+                            <li>🚀 Developed and maintained pixel-perfect, mobile-friendly web pages, ensuring optimal
+                                user experience across various devices.</li>
+                            <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
+                                high-quality, interactive features.</li>
+                            <li>&#9989; Pass rate with over 90% on assessments.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <p>Sep 2016- Jul 2020</p>
+                    <div class="education-card-details">
+                        <b>University of Glasgow, School of Life Sciences, Glasgow</b>
+                        <ul>
+                            <li>🎓 Bachelor of Science in Zoology, 2.1 achieved.</li>
+                            <li>📊 Utilized R-Studio and applied experimental design principles to perform statistical
+                                analysis and generate illustrative data representations in a study focused on the impact
+                                of circadian disruption on aging.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <li>📊 Utilized R-Studio and applied experimental design principles to perform statistical
+                                analysis and generate illustrative data representations in a study focused on the impact
+                                of circadian disruption on aging.</li> 
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="education-card">
+                    <p>Jul 2023- Sep<br/>2023</p>
                     <div>
                         <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp , Remote </b>
                         <ul>
@@ -201,22 +261,11 @@
                                 user experience across various devices.</li>
                             <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
                                 high-quality, interactive features.</li>
-                            <li> &#9989; Pass rate with over 90% on assessments.</li>
+                            <li>&#9989; Pass rate with over 90% on assessments.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="education-card">
-                    <p>Sep 2016- Jul 2020</p>
-                    <div>
-                    <b>University of Glasgow, School of Life Sciences, Glasgow</b>
-                    <ul>
-                        <li>Bachelor of Science in Zoology, 2.1 achieved.</li>
-                        <li>Utilized R-Studio and applied experimental design principles to perform statistical analysis
-                            and generate illustrative data representations in a study focused on the impact of circadian
-                            disruption on aging.</li>
-                    </ul>
-                    </div>
-                </div>
+                </div> -->
+
 
             </div>
         </article>
@@ -225,53 +274,92 @@
             <div class="education-container">
                 <div class="education-card">
                     <p>Jul 2022- Jul 2023</p>
-                    <div>
+                    <div class="education-card-details">
                         <b>Software Developer Consultant, FDM, London</b>
                         <ul>
-                            <li>Developed web app backends using Java Spring Framework and MYSQL, implementing test-driven development and internal API creation. Achieved an impressive test coverage of over 90%.</li>
-                            <li>Developed reusable React components, elevating user interfaces and optimizing performance in web applications. Implemented best practices for code modularity and maintainability, resulting in a 20% increase in application responsiveness.</li>
-                            <li>Successfully identified and resolved an average of ten software defects per sprint, demonstrating a strong problem-solving mindset. Collaborated closely with senior team members, resulting in a 15% improvement in code quality and functionality.</li>
-
-
+                            <li>🔨 Developed web app backends using Java Spring Framework and MYSQL, implementing
+                                test-driven development and internal API creation. Achieved an impressive test coverage
+                                of over 90%.</li>
+                            <li>🚀 Developed reusable React components, elevating user interfaces and optimizing
+                                performance in web applications. Implemented best practices for code modularity and
+                                maintainability, resulting in a 20% increase in application responsiveness.</li>
+                            <li>🐞 Successfully identified and resolved an average of ten software defects per sprint,
+                                demonstrating a strong problem-solving mindset. Collaborated closely with senior team
+                                members, resulting in a 15% improvement in code quality and functionality.</li>
                         </ul>
+
                     </div>
                 </div>
             </div>
 
         </article>
-            <article id="portfolio">
+        <article id="portfolio">
             <h2>Portfolio</h2>
-           <div class="portfolio-container">
-        <div class="portfolio-card">
-          <a href="https://pockche123.github.io/ohmyfood/">
-          <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
-         </a>
-          <div>
-           <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
-                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png" alt="github"/>
-            </a>
+            <div class="portfolio-container">
+                <div class="portfolio-card">
+                    <a href="https://pockche123.github.io/ohmyfood/">
+                        <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
+                    </a>
+                    <div>
+                        <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
+                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                                alt="github" class="portfolio-image" />
+                        </a>
 
-              <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png" alt="html-5--v1"/>
-              <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass"/>
-              </div>
-        </div>
-   
-       
-        <div class="portfolio-card">
-            <a href="https://resonance-music-app.netlify.app/">
-                <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class ="portfolio-image">
-            </a>
-        </div>
+                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                            alt="html-5--v1" />
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass" />
+                    </div>
+                </div>
 
-     
-       </div>
+
+                <div class="portfolio-card">
+                    <a href="https://resonance-music-app.netlify.app/">
+                        <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class="portfolio-image">
+                    </a>
+                    <div>
+                        <a href="https://github.com/pockche123/musicApp" target="_blank">
+                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                                alt="github" class="portfolio-image" />
+                        </a>
+                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                            alt="html-5--v1" />
+                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png"
+                            alt="react" />
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <!-- <video src="./assets/Reddy 33.mp4" width="500" height="300"></video> -->
+
+                    <video src="./assets/Reddy 33.mp4" controls width="700" height="500"></video>
+                    <div>
+                        <a href="https://github.com/pockche123/notesApp" target="_blank">
+                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png">
+                        </a>
+                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                            alt="html-5--v1" />
+                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png"
+                            alt="react" />
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png" alt="nodejs" />
+                        <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
+                            alt="express-js" />
+
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/mongodb.png" alt="mongodb" />
+                    </div>
+                </div>
+
+
+            </div>
 
 
         </article>
         <article id="skills">
             <h2>Skills</h2>
         </article>
-    
+
         <article id="socials">
             <h2>Socials</h2>
         </article>
