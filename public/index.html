@@ -102,6 +102,34 @@
             flex-direction: column;
         }
 
+        #music-app-image{
+            width: 100%;
+
+        }
+        .portfolio-container{
+            display: flex; 
+             flex-wrap: wrap;
+        }
+
+        .portfolio-card{
+             flex-basis: calc(48% - 0.6rem); /* Adjust the value accordingly */
+    margin: 1.2rem; 
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+ 
+        }
+        
+        .portfolio-image{
+               transition: 0.3s ease-in-out;
+        }
+
+        .portfolio-image:hover{
+            transform: scale(1.03);
+        }
+
  
 
 
@@ -216,18 +244,25 @@
            <div class="portfolio-container">
         <div class="portfolio-card">
           <a href="https://pockche123.github.io/ohmyfood/">
-          <img src="./img/ohmyfood.jpg" alt="myfood">
+          <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
          </a>
-            <div>
+          <div>
            <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
                         <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png" alt="github"/>
             </a>
 
               <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png" alt="html-5--v1"/>
               <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass"/>
+              </div>
         </div>
    
+       
+        <div class="portfolio-card">
+            <a href="https://resonance-music-app.netlify.app/">
+                <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class ="portfolio-image">
+            </a>
         </div>
+
      
        </div>
 
