@@ -17,6 +17,11 @@
             src: url('./assets/nintendo.ttf') format('opentype');
         }
 
+        @font-face{
+            font-family: 'pixel'; 
+            src: url('./assets/VT323-Regular.ttf') format('truetype')
+        }
+
         body {
             background: black;
             margin: 0;
@@ -87,10 +92,17 @@
 
         .education-card {
             display: flex;
+            flex-direction: row;
+            /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'pixel', sans-serif;
+            font-size: 21px; 
+        }
+        .education-container{
+            display: flex;
             flex-direction: column;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+ 
 
 
         .info {
@@ -128,7 +140,7 @@
             <div>
                 <label>Hello,</label>
                 <h1>I am Parjal Rai.</h1>
-                <p>I am a full-stack developer and a tech enthusiast, navigating innovations's ebb and flow.</p>
+                <b>Full-Stack Developer</b>
                 <img src="./img/profile-pic4.jpg" alt="profile-pic">
             </div>
 
@@ -137,7 +149,8 @@
             <h2>Education</h2>
             <div class="education-container">
                 <div class="education-card">
-                    <p>2023-2024</p>
+                    <p>Oct 2023- Jan 2024</p>
+                    <div>
                     <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
                     <ul>
                         <li>Acquired comprehensive knowledge and hands-on experience in full stack development, spanning
@@ -149,9 +162,10 @@
                         <li>Applied problem-solving skills through debugging assignments, participating in hackathons,
                             and delivering impactful project presentations</li>
                     </ul>
+                    </div>
                 </div>
                 <div class="education-card">
-                    <p>2023-2023</p>
+                    <p>Jul 2023- Sep 2023</p>
                     <div>
                         <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp , Remote </b>
                         <ul>
@@ -164,7 +178,8 @@
                     </div>
                 </div>
                 <div class="education-card">
-                    <p>2016-2020</p>
+                    <p>Sep 2016- Jul 2020</p>
+                    <div>
                     <b>University of Glasgow, School of Life Sciences, Glasgow</b>
                     <ul>
                         <li>Bachelor of Science in Zoology, 2.1 achieved.</li>
@@ -172,16 +187,56 @@
                             and generate illustrative data representations in a study focused on the impact of circadian
                             disruption on aging.</li>
                     </ul>
+                    </div>
                 </div>
 
             </div>
         </article>
+        <article id="education">
+            <h2>Work Experience</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <p>Jul 2022- Jul 2023</p>
+                    <div>
+                        <b>Software Developer Consultant, FDM, London</b>
+                        <ul>
+                            <li>Developed web app backends using Java Spring Framework and MYSQL, implementing test-driven development and internal API creation. Achieved an impressive test coverage of over 90%.</li>
+                            <li>Developed reusable React components, elevating user interfaces and optimizing performance in web applications. Implemented best practices for code modularity and maintainability, resulting in a 20% increase in application responsiveness.</li>
+                            <li>Successfully identified and resolved an average of ten software defects per sprint, demonstrating a strong problem-solving mindset. Collaborated closely with senior team members, resulting in a 15% improvement in code quality and functionality.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+            <article id="portfolio">
+            <h2>Portfolio</h2>
+           <div class="portfolio-container">
+        <div class="portfolio-card">
+          <a href="https://pockche123.github.io/ohmyfood/">
+          <img src="./img/ohmyfood.jpg" alt="myfood">
+         </a>
+            <div>
+           <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
+                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png" alt="github"/>
+            </a>
+
+              <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png" alt="html-5--v1"/>
+              <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass"/>
+        </div>
+   
+        </div>
+     
+       </div>
+
+
+        </article>
         <article id="skills">
             <h2>Skills</h2>
         </article>
-        <article id="portfolio">
-            <h2>Portfolio</h2>
-        </article>
+    
         <article id="socials">
             <h2>Socials</h2>
         </article>
