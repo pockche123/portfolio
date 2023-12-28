@@ -39,6 +39,10 @@
             position: relative;
         }
 
+        #about, #education, #skills, #portfolio, #socials{
+            margin-bottom: 10em;
+        }
+
         #about-link,
         #education-link,
         #skills-link,
@@ -86,9 +90,26 @@
         }
 
 
-        #about {
+            #about {
+            overflow: hidden;
             min-height: 100vh;
+            font-size: small;
         }
+
+        .profile-pic {
+            float: left;
+            margin: 0 20px 20px 0;
+            max-width: 200px; /* Adjust the width as needed */
+            border-radius: 50%; /* Make the image circular if desired */
+        }
+
+        .line-space {
+    line-height: 1.5; /* Adjust the value as needed for the desired spacing */
+}
+
+        /* #about div {
+            word-wrap: break-word;
+        } */
 
         .education-card {
             display: flex;
@@ -97,6 +118,12 @@
             font-family: 'pixel', sans-serif;
             font-size: 21px;
             padding: 1em;
+        }
+
+        .about-container{
+            /* font-family: 'pixel', sans-serif; */
+            font-size: 15px;
+
         }
 
         .education-container {
@@ -140,6 +167,15 @@
 
         .portfolio-image {
             transition: 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        .github-image {
+            transition: 0.3s ease-in-out;
+        }
+
+        .github-image:hover {
+            transform: scale(1.2)
         }
 
         .portfolio-image:hover {
@@ -156,6 +192,22 @@
             object-fit: cover;
         }
 
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            font-size: 15px;
+        }
+
+        .skills-card li {
+    margin-bottom: 10px;
+}
+        
 
 
 
@@ -163,6 +215,30 @@
             padding: 2em;
             /* margin-top: 100vh; */
         }
+
+        
+        .all-github {
+      position: relative;
+      display: flex; 
+      flex-direction: row;
+      background: gold;
+      align-items: center;
+      color: black; 
+      background-color: white;
+    }
+
+
+
+  
+
+    @keyframes bounceArrow {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(20px);
+      }
+    }
     </style>
     <script type="module" src="/js/main.js"></script>
     <!-- <link rel="stylesheet" href="./img/prstart.ttf"> -->
@@ -183,22 +259,36 @@
         <a id="portfolio-link" href="#portfolio">
             <h3>Portfolio</h3>
         </a>
-        <a id="socials-link" href="#socials">
-            <h3>Socials</h3>
+        <a id="socials-link" href="#contact">
+            <h3>Contact me</h3>
         </a>
 
     </div>
     <section class="info">
-        <article id="about">
+
+<article id="about">
+    <h2>About</h2>
+    <div class="about-container">
+        <h1>Parjal Rai</h1>
+        <b>Full-Stack Developer | 2 years experience</b>
+        <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
+<p class="line-space">Welcome! I'm a passionate developer with expertise in creating efficient and user-friendly web applications. My skills span front-end technologies like HTML, CSS, and JavaScript, as well as back-end technologies such as Node.js and Java. With a commitment to high-quality code and adaptability to new technologies, I thrive in dynamic environments.</p>
+        <p class="line-space">With a focus on staying updated with industry trends, I aim to create impactful solutions. Explore my portfolio for exciting projects. Open to new opportunities and collaborations – let's build something amazing together!</p>
+    </div>
+</article>
+
+
+
+        <!-- <article id="about">
             <h2>About</h2>
             <div>
                 <label>Hello,</label>
                 <h1>I am Parjal Rai.</h1>
-                <b>Full-Stack Developer</b>
-                <img src="./img/profile-pic4.jpg" alt="profile-pic">
-            </div>
+                <b>Full-Stack Developer with 2 years of experience</b>
+                <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
+            </div> -->
 
-        </article>
+        <!-- </article> -->
         <article id="education">
             <h2>Education</h2>
             <div class="education-container">
@@ -246,30 +336,11 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <li>📊 Utilized R-Studio and applied experimental design principles to perform statistical
-                                analysis and generate illustrative data representations in a study focused on the impact
-                                of circadian disruption on aging.</li> 
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="education-card">
-                    <p>Jul 2023- Sep<br/>2023</p>
-                    <div>
-                        <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp , Remote </b>
-                        <ul>
-                            <li>🚀 Developed and maintained pixel-perfect, mobile-friendly web pages, ensuring optimal
-                                user experience across various devices.</li>
-                            <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
-                                high-quality, interactive features.</li>
-                            <li>&#9989; Pass rate with over 90% on assessments.</li>
-                        </ul>
-                    </div>
-                </div> -->
+
 
 
             </div>
-        </article>
-        <article id="education">
+                <article>
             <h2>Work Experience</h2>
             <div class="education-container">
                 <div class="education-card">
@@ -293,6 +364,8 @@
             </div>
 
         </article>
+        </article>
+    
         <article id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio-container">
@@ -300,10 +373,10 @@
                     <a href="https://pockche123.github.io/ohmyfood/">
                         <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
                     </a>
-                    <div>
+                    <div class="icons">
                         <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
                             <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                alt="github" class="portfolio-image" />
+                                alt="github" class="github-image" />
                         </a>
 
                         <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
@@ -317,10 +390,10 @@
                     <a href="https://resonance-music-app.netlify.app/">
                         <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class="portfolio-image">
                     </a>
-                    <div>
+                    <div class="icons">
                         <a href="https://github.com/pockche123/musicApp" target="_blank">
                             <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                alt="github" class="portfolio-image" />
+                                alt="github" class="github-image" />
                         </a>
                         <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
                             alt="html-5--v1" />
@@ -331,38 +404,113 @@
                 </div>
 
                 <div class="portfolio-card">
-                    <!-- <video src="./assets/Reddy 33.mp4" width="500" height="300"></video> -->
+                    <a href="https://www.youtube.com/watch?v=kpvrcBY2m5U" target="_blank">
+                        <img src="./img/noteworthy.jpg" alt="noteworthy" class="portfolio-image">
+                    </a>
 
-                    <video src="./assets/Reddy 33.mp4" controls width="700" height="500"></video>
-                    <div>
+                    <div class="icons">
                         <a href="https://github.com/pockche123/notesApp" target="_blank">
-                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png">
+                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                                class="github-image">
                         </a>
                         <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
                             alt="html-5--v1" />
                         <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
                         <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png"
                             alt="react" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png" alt="nodejs" />
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png"
+                            alt="nodejs" />&nbsp;
                         <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
                             alt="express-js" />
 
                         <img width="96" height="96" src="https://img.icons8.com/color/96/mongodb.png" alt="mongodb" />
+                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
                     </div>
                 </div>
 
+                <div class="portfolio-card">
+                    <a href="https://www.youtube.com/watch?v=afNW69mkX4A" target="_blank">
+                        <img src="./img/florin.jpg" alt="florin-pic" class="portfolio-image">
+                    </a>
+                    <div class="icons">
+                        <a href="https://github.com/pockche123/reddy22_server" target="_blank">
+                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                            class="github-image">
+                        </a>
+                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                            alt="html-5--v1" />
+                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png" alt="javascript--v1"/>
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png"
+                            alt="nodejs" />&nbsp;
+                        <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
+                            alt="express-js" />
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/postgreesql.png" alt="postgreesql"/>
+                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
+                    </div>
+                </div>
+            </div>
 
+            <div class="all-github">
+                  <a href="https://github.com/pockche123" target="_blank">
+                           <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github"/>
+                         
+                        </a>
+                       
+                        <img width="80" height="80" src='./assets/icons8-left-arrow.gif' alt="arrow"/>
+                    <!-- <div class="arrow"></div> -->
+                    <h2>Checkout my github for more projects!</h2>
             </div>
 
 
         </article>
         <article id="skills">
             <h2>Skills</h2>
+            <div class="skills-container">
+<div class="skills-card">
+<h3>Technical Skills</h3>
+    <ul>
+        <li>HTML5 - 2 years</li>
+        <li>CSS - 2 years</li>
+        <li>JavaScript - 2 years</li>
+        <li>TypeScript - 1 year</li>
+        <li>React - 2 years</li>
+        <li>Java - 2 years</li>
+        <li>Node.js - 1 year</li>
+        <li>SQL - 2 years</li>
+        <li>MongoDb - 1 year</li>
+        <li>Github - 1 year</li>
+        <li>Gitlab - 1 year</li>
+        <li>Docker - 1 year</li>
+    </ul>
+</div>
+<div class="skills-card">
+     <h3>Soft Skills</h3>
+    <ul>
+        <li>Communication - 5 years</li>
+        <li>Problem-solving - 4 years</li>
+        <li>Team Collaboration - 5 years</li>
+    </ul>
+</div>
+<div class="skills-card">
+    <h3>Other Skills</h3>
+    <ul>
+        <li>Agile - 2 years</li>
+    </ul>
+</div>
+</div>
         </article>
 
-        <article id="socials">
-            <h2>Socials</h2>
-        </article>
+       <article id="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:bayingray123@gmail.com">
+        <img width="110" height="90" src="./img/mail.png" alt="mail"/>
+    </a>
+    <a href="https://www.linkedin.com/in/parjal-rai-3853b7164/" target="_blank">
+        <img width="80" height="80" src="./img/linkedin.png" alt="linkedin"/>
+    </a>
+
+</article>
 
     </section>
 
