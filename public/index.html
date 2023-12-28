@@ -142,7 +142,7 @@
             text-decoration: none;
         }
 
-       .education-card ul {
+        .education-card ul {
             list-style: none;
         }
 
@@ -209,7 +209,7 @@
             flex-direction: row;
             justify-content: space-evenly;
             font-size: 15px;
-            
+
         }
 
         .skills-card li {
@@ -235,12 +235,12 @@
             background-color: white;
         }
 
-        #screen-container{
-            position: relative; 
+        #screen-container {
+            position: relative;
         }
 
-        #volume-on{
-            position: absolute; 
+        #volume-on {
+            position: absolute;
             top: 0;
             left: 10px;
             color: white;
@@ -250,82 +250,87 @@
         }
 
 
-        #instruction-icon{
-            position: absolute; 
+        #instruction-icon {
+            position: absolute;
             top: 4px;
             left: 70px;
+            cursor: pointer;
 
         }
-        .instruction-container{
+
+        .instruction-container {
             display: flex;
             flex-direction: row;
         }
 
-        #instruction{
+        #instruction {
             background-color: rgb(117, 110, 121);
             padding: 2em;
-            z-index: 10; 
+            z-index: 10;
             position: absolute;
-            width: 90%; 
-            left: 50%; 
+            width: 85%;
+            left: 50%;
             top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            left: 50%;
+            transform: translate(-50%, -70%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 10px solid white;
 
         }
 
-        .instruction-card{
+        .instruction-card {
             position: relative;
         }
 
-        #instruction li{
+        #instruction li {
             margin-bottom: 5px;
         }
 
-        
-    
-        #close{
+
+
+        #close {
             position: absolute;
             right: 0;
             top: -40px;
             font-size: x-large;
             cursor: pointer;
         }
-
-       
-
-
     </style>
     <script type="module" src="/js/main.js"></script>
     <script defer src="/js/main.js"></script>
+    <script defer src="/js/index.jsx"></script>
     <!-- <link rel="stylesheet" href="./img/prstart.ttf"> -->
 </head>
 
 <body>
     <div id="screen-container">
         <div id="instruction">
-        <section class="instruction-card">
-            <p id="close">X</p>
-    <h1>Welcome to My Portfolio!</h1>
-    <h3>Instructions</h3>
-<div class="instruction-container">
-    <img width="300" height="230" src="https://community.aseprite.org/uploads/default/original/3X/3/3/336dd90e04e66e12fe6913aab58a07d957c9cfb0.gif" alt="keys">
-  
-<ul>
-    <li>Press the 'W' key to jump.</li>
-    <li>Press the 'D' key to move right.</li>
-    <li>Press the 'A' key to move left.</li>
-    <li>Combine 'S' with 'D' or 'S' with 'A' keys to sprint.</li>
-    <li>Interact with the  <img width="35" height="35" src="./img/mario-block.png" alt="block" id="block"/> to navigate to different sections.</li>
-</ul>
-</div>
-</section>
-</div>
+            <section class="instruction-card">
+                <p id="close">X</p>
+                <h1>Welcome to My Portfolio!</h1>
+                <h3>Instructions</h3>
+                <div class="instruction-container">
+                    <img width="300" height="230"
+                        src="https://community.aseprite.org/uploads/default/original/3X/3/3/336dd90e04e66e12fe6913aab58a07d957c9cfb0.gif"
+                        alt="keys">
+
+                    <ul>
+                        <li>Press the 'W' key to jump.</li>
+                        <li>Press the 'D' key to move right.</li>
+                        <li>Press the 'A' key to move left.</li>
+                        <li>Combine 'S' with 'D' or 'S' with 'A' keys to sprint.</li>
+                        <li>Interact with the <img width="35" height="35" src="./img/mario-block.png" alt="block"
+                                id="block" /> to navigate to different sections.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
         <canvas id="screen" width="400" height="224"></canvas>
-<img width="40" height="40" src="https://img.icons8.com/material-sharp/48/FFFFFF/high-volume--v1.png" alt="high-volume--v1" id="volume-on"/>
-<img width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/brief.png" alt="brief" id="instruction-icon">
+        <img width="40" height="40" src="https://img.icons8.com/material-sharp/48/FFFFFF/high-volume--v1.png"
+            alt="high-volume--v1" id="volume-on" />
+        <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/brief.png" alt="brief"
+            id="instruction-icon">
 
         <a id="about-link" href="#about">
             <h3>About</h3>
@@ -607,6 +612,27 @@
                 });
             });
         });
+
+        const close = document.getElementById('close')
+        const instructionIcon = document.getElementById('instruction-icon')
+const instruction = document.getElementById('instruction')
+
+
+        if (close) {
+            close.addEventListener('click', closeInstructions)
+        }
+        function closeInstructions() {
+            console.log("close clicked")
+            instruction.style.display = 'none';
+        }
+        if(instructionIcon){
+        instructionIcon.addEventListener('click', openInstructions)
+        }
+
+            function openInstructions() {
+            console.log("open clicked")
+            instruction.style.display = 'block';
+        }
     });
 </script>
 

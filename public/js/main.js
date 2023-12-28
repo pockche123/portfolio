@@ -1,4 +1,4 @@
-import Timer from './Timer.js';
+import  Timer from './Timer.js';
 import { loadLevel } from './loaders/level.js';
 import { createMario } from './entities.js';
 import { setupKeyboard } from './input.js';
@@ -36,7 +36,14 @@ class AudioBoard {
 
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
- const volumeImage = document.getElementById("volume-on");
+const volumeImage = document.getElementById("volume-on");
+const close = document.getElementById('close')
+const instructionIcon = document.getElementById('instruction-icon')
+const instruction = document.getElementById('instruction')
+
+
+
+
 
 Promise.all([
     createMario(),
@@ -46,23 +53,15 @@ Promise.all([
 ])
     .then(([mario, level, font]) => {
         mario.pos.set(64, 64);
-
-
         // console.log("mario pos: ", mario.pos)
         const audioContext = new AudioContext()
         const audioBoard = new AudioBoard(audioContext)
         const loadAudio = createAudioLoader(audioContext);
         loadAudio('/audio/jump.ogg')
             .then(buffer => {
-
-
                 audioBoard.addAudio('jump', buffer)
                 // audioBoard.playAudio('jump')
-
-
             })
-
-
         level.entities.add(mario);
         level.comp.layers.push(createDashboardLayer(font))
 
@@ -78,10 +77,10 @@ Promise.all([
         //     });
         // });
 
-
-       
         volumeImage.addEventListener("click", toggleVolume);
-        
+       
+  
+
         function toggleVolume() {
             console.log("toggle volume clicked")
             audioBoard.toggleMute();
@@ -94,6 +93,16 @@ Promise.all([
             }
         }
 
+        //  close.addEventListener('click', closeInstructions)
+        // function closeInstructions() {
+        //     console.log("close clicked")
+        //     instruction.style.display = 'none';
+        // }
+
+        function openInstructions() {
+            console.log("open clicked")
+            instruction.style.display = 'block';
+        }
 
         const timer = new Timer(1 / 60);
         timer.update = function update(deltaTime) {
@@ -109,18 +118,12 @@ Promise.all([
                 mario.pos.setX(390)
             }
 
-
-
-
-
-
             level.comp.draw(context);
             // font.draw('A', context, 0, 0)
         }
 
         timer.start();
     });
-
 
 
 
