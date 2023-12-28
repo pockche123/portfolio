@@ -39,7 +39,11 @@
             position: relative;
         }
 
-        #about, #education, #skills, #portfolio, #socials{
+        #about,
+        #education,
+        #skills,
+        #portfolio,
+        #socials {
             margin-bottom: 10em;
         }
 
@@ -90,7 +94,7 @@
         }
 
 
-            #about {
+        #about {
             overflow: hidden;
             min-height: 100vh;
             font-size: small;
@@ -99,13 +103,16 @@
         .profile-pic {
             float: left;
             margin: 0 20px 20px 0;
-            max-width: 200px; /* Adjust the width as needed */
-            border-radius: 50%; /* Make the image circular if desired */
+            max-width: 200px;
+            /* Adjust the width as needed */
+            border-radius: 50%;
+            /* Make the image circular if desired */
         }
 
         .line-space {
-    line-height: 1.5; /* Adjust the value as needed for the desired spacing */
-}
+            line-height: 1.5;
+            /* Adjust the value as needed for the desired spacing */
+        }
 
         /* #about div {
             word-wrap: break-word;
@@ -120,7 +127,7 @@
             padding: 1em;
         }
 
-        .about-container{
+        .about-container {
             /* font-family: 'pixel', sans-serif; */
             font-size: 15px;
 
@@ -197,7 +204,7 @@
             align-items: center;
         }
 
-        .skills-container{
+        .skills-container {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -205,9 +212,9 @@
         }
 
         .skills-card li {
-    margin-bottom: 10px;
-}
-        
+            margin-bottom: 10px;
+        }
+
 
 
 
@@ -216,37 +223,92 @@
             /* margin-top: 100vh; */
         }
 
-        
+
         .all-github {
-      position: relative;
-      display: flex; 
-      flex-direction: row;
-      background: gold;
-      align-items: center;
-      color: black; 
-      background-color: white;
-    }
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            background: gold;
+            align-items: center;
+            color: black;
+            background-color: white;
+        }
+
+        #screen-container{
+            position: relative; 
+        }
+
+        #volume-on{
+            position: absolute; 
+            top: 0;
+            left: 10px;
+            color: white;
+            cursor: pointer;
+            z-index: 0;
+
+        }
+        .instruction-container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #instruction{
+            background-color: rgb(117, 110, 121);
+            padding: 2em;
+            z-index: 10; 
+            position: absolute;
+            top: 10%;
+        }
+
+        .instruction-card{
+            position: relative;
+        }
+
+        #instruction li{
+            margin-bottom: 5px;
+        }
+
+        
+    
+        #close{
+            position: absolute;
+            right: 0;
+            top: -40px;
+            font-size: x-large;
+            cursor: pointer;
+        }
+
+       
 
 
-
-  
-
-    @keyframes bounceArrow {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(20px);
-      }
-    }
     </style>
     <script type="module" src="/js/main.js"></script>
+    <script defer src="/js/main.js"></script>
     <!-- <link rel="stylesheet" href="./img/prstart.ttf"> -->
 </head>
 
 <body>
     <div id="screen-container">
+        <div id="instruction">
+        <section class="instruction-card">
+            <p id="close">X</p>
+    <h1>Welcome to My Portfolio!</h1>
+    <h3>Instructions</h3>
+<div class="instruction-container">
+    <img width="300" height="230" src="https://community.aseprite.org/uploads/default/original/3X/3/3/336dd90e04e66e12fe6913aab58a07d957c9cfb0.gif" alt="keys">
+  
+<ul>
+    <li>Press the 'W' key to jump.</li>
+    <li>Press the 'D' key to move right.</li>
+    <li>Press the 'A' key to move left.</li>
+    <li>Combine 'S' with 'D' or 'S' with 'A' keys to sprint.</li>
+    <li>Interact with the  <img width="35" height="35" src="./img/mario-block.png" alt="block" id="block"/> for quick navigation to links.</li>
+</ul>
+</div>
+</section>
+</div>
         <canvas id="screen" width="400" height="224"></canvas>
+<img width="40" height="40" src="https://img.icons8.com/material-sharp/48/FFFFFF/high-volume--v1.png" alt="high-volume--v1" id="volume-on"/>
         <a id="about-link" href="#about">
             <h3>About</h3>
         </a>
@@ -266,29 +328,22 @@
     </div>
     <section class="info">
 
-<article id="about">
-    <h2>About</h2>
-    <div class="about-container">
-        <h1>Parjal Rai</h1>
-        <b>Full-Stack Developer | 2 years experience</b>
-        <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
-<p class="line-space">Welcome! I'm a passionate developer with expertise in creating efficient and user-friendly web applications. My skills span front-end technologies like HTML, CSS, and JavaScript, as well as back-end technologies such as Node.js and Java. With a commitment to high-quality code and adaptability to new technologies, I thrive in dynamic environments.</p>
-        <p class="line-space">With a focus on staying updated with industry trends, I aim to create impactful solutions. Explore my portfolio for exciting projects. Open to new opportunities and collaborations – let's build something amazing together!</p>
-    </div>
-</article>
-
-
-
-        <!-- <article id="about">
+        <article id="about">
             <h2>About</h2>
-            <div>
-                <label>Hello,</label>
-                <h1>I am Parjal Rai.</h1>
-                <b>Full-Stack Developer with 2 years of experience</b>
+            <div class="about-container">
+                <h1>Parjal Rai</h1>
+                <b>Full-Stack Developer | 2 years experience</b>
                 <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
-            </div> -->
+                <p class="line-space">Welcome! I'm a passionate developer with expertise in creating efficient and
+                    user-friendly web applications. My skills span front-end technologies like HTML, CSS, and
+                    JavaScript, as well as back-end technologies such as Node.js and Java. With a commitment to
+                    high-quality code and adaptability to new technologies, I thrive in dynamic environments.</p>
+                <p class="line-space">With a focus on staying updated with industry trends, I aim to create impactful
+                    solutions. Explore my portfolio for exciting projects. Open to new opportunities and collaborations
+                    – let's build something amazing together!</p>
+            </div>
+        </article>
 
-        <!-- </article> -->
         <article id="education">
             <h2>Education</h2>
             <div class="education-container">
@@ -340,32 +395,35 @@
 
 
             </div>
-                <article>
-            <h2>Work Experience</h2>
-            <div class="education-container">
-                <div class="education-card">
-                    <p>Jul 2022- Jul 2023</p>
-                    <div class="education-card-details">
-                        <b>Software Developer Consultant, FDM, London</b>
-                        <ul>
-                            <li>🔨 Developed web app backends using Java Spring Framework and MYSQL, implementing
-                                test-driven development and internal API creation. Achieved an impressive test coverage
-                                of over 90%.</li>
-                            <li>🚀 Developed reusable React components, elevating user interfaces and optimizing
-                                performance in web applications. Implemented best practices for code modularity and
-                                maintainability, resulting in a 20% increase in application responsiveness.</li>
-                            <li>🐞 Successfully identified and resolved an average of ten software defects per sprint,
-                                demonstrating a strong problem-solving mindset. Collaborated closely with senior team
-                                members, resulting in a 15% improvement in code quality and functionality.</li>
-                        </ul>
+            <article>
+                <h2>Work Experience</h2>
+                <div class="education-container">
+                    <div class="education-card">
+                        <p>Jul 2022- Jul 2023</p>
+                        <div class="education-card-details">
+                            <b>Software Developer Consultant, FDM, London</b>
+                            <ul>
+                                <li>🔨 Developed web app backends using Java Spring Framework and MYSQL, implementing
+                                    test-driven development and internal API creation. Achieved an impressive test
+                                    coverage
+                                    of over 90%.</li>
+                                <li>🚀 Developed reusable React components, elevating user interfaces and optimizing
+                                    performance in web applications. Implemented best practices for code modularity and
+                                    maintainability, resulting in a 20% increase in application responsiveness.</li>
+                                <li>🐞 Successfully identified and resolved an average of ten software defects per
+                                    sprint,
+                                    demonstrating a strong problem-solving mindset. Collaborated closely with senior
+                                    team
+                                    members, resulting in a 15% improvement in code quality and functionality.</li>
+                            </ul>
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </article>
         </article>
-        </article>
-    
+
         <article id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio-container">
@@ -435,31 +493,33 @@
                     <div class="icons">
                         <a href="https://github.com/pockche123/reddy22_server" target="_blank">
                             <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                            class="github-image">
+                                class="github-image">
                         </a>
                         <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
                             alt="html-5--v1" />
                         <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png" alt="javascript--v1"/>
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png"
+                            alt="javascript--v1" />
                         <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png"
                             alt="nodejs" />&nbsp;
                         <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
                             alt="express-js" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/postgreesql.png" alt="postgreesql"/>
+                        <img width="96" height="96" src="https://img.icons8.com/color/96/postgreesql.png"
+                            alt="postgreesql" />
                         <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
                     </div>
                 </div>
             </div>
 
             <div class="all-github">
-                  <a href="https://github.com/pockche123" target="_blank">
-                           <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github"/>
-                         
-                        </a>
-                       
-                        <img width="80" height="80" src='./assets/icons8-left-arrow.gif' alt="arrow"/>
-                    <!-- <div class="arrow"></div> -->
-                    <h2>Checkout my github for more projects!</h2>
+                <a href="https://github.com/pockche123" target="_blank">
+                    <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github" />
+
+                </a>
+
+                <img width="80" height="80" src='./assets/icons8-left-arrow.gif' alt="arrow" />
+                <!-- <div class="arrow"></div> -->
+                <h2>Checkout my github for more projects!</h2>
             </div>
 
 
@@ -467,50 +527,50 @@
         <article id="skills">
             <h2>Skills</h2>
             <div class="skills-container">
-<div class="skills-card">
-<h3>Technical Skills</h3>
-    <ul>
-        <li>HTML5 - 2 years</li>
-        <li>CSS - 2 years</li>
-        <li>JavaScript - 2 years</li>
-        <li>TypeScript - 1 year</li>
-        <li>React - 2 years</li>
-        <li>Java - 2 years</li>
-        <li>Node.js - 1 year</li>
-        <li>SQL - 2 years</li>
-        <li>MongoDb - 1 year</li>
-        <li>Github - 1 year</li>
-        <li>Gitlab - 1 year</li>
-        <li>Docker - 1 year</li>
-    </ul>
-</div>
-<div class="skills-card">
-     <h3>Soft Skills</h3>
-    <ul>
-        <li>Communication - 5 years</li>
-        <li>Problem-solving - 4 years</li>
-        <li>Team Collaboration - 5 years</li>
-    </ul>
-</div>
-<div class="skills-card">
-    <h3>Other Skills</h3>
-    <ul>
-        <li>Agile - 2 years</li>
-    </ul>
-</div>
-</div>
+                <div class="skills-card">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>HTML5 - 2 years</li>
+                        <li>CSS - 2 years</li>
+                        <li>JavaScript - 2 years</li>
+                        <li>TypeScript - 1 year</li>
+                        <li>React - 2 years</li>
+                        <li>Java - 2 years</li>
+                        <li>Node.js - 1 year</li>
+                        <li>SQL - 2 years</li>
+                        <li>MongoDb - 1 year</li>
+                        <li>Github - 1 year</li>
+                        <li>Gitlab - 1 year</li>
+                        <li>Docker - 1 year</li>
+                    </ul>
+                </div>
+                <div class="skills-card">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Communication - 5 years</li>
+                        <li>Problem-solving - 4 years</li>
+                        <li>Team Collaboration - 5 years</li>
+                    </ul>
+                </div>
+                <div class="skills-card">
+                    <h3>Other Skills</h3>
+                    <ul>
+                        <li>Agile - 2 years</li>
+                    </ul>
+                </div>
+            </div>
         </article>
 
-       <article id="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:bayingray123@gmail.com">
-        <img width="110" height="90" src="./img/mail.png" alt="mail"/>
-    </a>
-    <a href="https://www.linkedin.com/in/parjal-rai-3853b7164/" target="_blank">
-        <img width="80" height="80" src="./img/linkedin.png" alt="linkedin"/>
-    </a>
+        <article id="contact">
+            <h2>Contact Me</h2>
+            <a href="mailto:bayingray123@gmail.com">
+                <img width="110" height="90" src="./img/mail.png" alt="mail" />
+            </a>
+            <a href="https://www.linkedin.com/in/parjal-rai-3853b7164/" target="_blank">
+                <img width="80" height="80" src="./img/linkedin.png" alt="linkedin" />
+            </a>
 
-</article>
+        </article>
 
     </section>
 
@@ -531,5 +591,7 @@
         });
     });
 </script>
+
+
 
 </html>
