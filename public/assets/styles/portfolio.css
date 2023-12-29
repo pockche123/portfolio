@@ -38,6 +38,11 @@
 
         #portfolio{
             position: relative;
+            background-color: white;
+            padding-top: 7em;
+            color: black;
+         
+            
           
         }
 
@@ -62,12 +67,7 @@
             background-color: white;
 
         }
-
-        .custom-shape-divider-top-1703870185 .shape-fill {
-    fill: #FFFFFF;
-}
-
-        .custom-shape-divider-top-1703870185 {
+.custom-shape-divider-top-1703875443 {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,7 +76,16 @@
     line-height: 0;
 }
 
+.custom-shape-divider-top-1703875443 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 190px;
+}
 
+.custom-shape-divider-top-1703875443 .shape-fill {
+    fill: #202731;
+}
 .spacer{
     aspect-ratio: 900/550;
     width: 100%; 
@@ -91,4 +100,8 @@
 .layer1{
     background-image: url('../../img/layered-waves-haikei.svg');
 
+}
+
+#portfolio h2{
+ padding: 1em;
 }
