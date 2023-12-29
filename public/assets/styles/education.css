@@ -1,0 +1,41 @@
+
+
+#education{
+    margin-top: 30vh;
+    padding: 1em;
+}
+
+
+        .education-card-details {
+            width: 90%;
+        }
+
+        
+        .education-card p {
+            width: 13%;
+        }
+
+        
+        .education-card ul {
+            list-style: none;
+        }
+
+             .education-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+               .education-card {
+            display: flex;
+            flex-direction: row;
+            /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'pixel', sans-serif;
+            font-size: 21px;
+            padding: 1em;
+        }
+
+               #education-link {
+            bottom: 45%;
+            left: 33%;
+        }
+

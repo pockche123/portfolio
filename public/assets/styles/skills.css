@@ -6,8 +6,8 @@
 
         #skills{
             /* padding-top: 15em; */
-            padding: 15em 1em;
-            padding-bottom: 3em;
+            /* padding: 15em 1em; */
+            /* padding-bottom: 3em; */
             position: relative;
             z-index: 100;
         }
@@ -26,3 +26,10 @@
     position: relative;
 
 } */
+
+.skills-section{
+    width: 100%; 
+    position: relative;
+   
+
+}

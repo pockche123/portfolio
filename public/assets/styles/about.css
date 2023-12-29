@@ -1,11 +1,16 @@
 #about {
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 50vh;
     font-size: small;
-    border: 4px solid black;
+    /* border: 4px solid black; */
     position: relative;
-  
+    color: black;
+    margin-top: 46vh;
     /* padding: 2em; */
+    padding: 1em;
+    
+
+   
 }
 
 .profile-pic {
@@ -14,7 +19,7 @@
     margin-right: 10%;
     max-width: 400px;
     height: 100%;
-    border-radius: 62% 18% 51% 30% / 59% 59% 28% 10%;
+    /* border-radius: 62% 18% 51% 30% / 59% 59% 28% 10%; */
     /* border-radius: 50%; */
 
 
@@ -32,41 +37,44 @@
     /* Adjust the value as needed for the desired spacing */
 }
 
+/* .about-container{
+    position: relative;
+    margin-bottom: 10vh;
+} */
+
+
+
+
+
 .about-container{
+    width: 100%;
     position: relative;
 }
 
-.curve{
+#layer2-up{
     position: absolute; 
-    height: 225px; 
-    width: 100%; 
-    bottom: 0;
+    top: 0;
 }
 
-.curve::before{
-    content: ''; 
-    display: block; 
-    position: absolute; 
-    border-radius: 100% 50%; 
-    width: 55%; 
-    height: 100%; 
-    background-color: #202731;
-    transform: translate(85%, 60%);
-
-}
-
-.curve::after{
-    content: ''; 
-    display: block; 
-    position: absolute; 
-    border-radius: 100% 50%; 
-    width: 55%; 
-    height: 100%; 
-    background-color: #3c31dd;
-    transform: translate(-4%, 40%); 
-    z-index: -1; 
-
+#layer2-down{
+    position: absolute;
+    bottom: -32%;
+    
 }
 
 
+ #contact {
+    margin-top: 4em;
+}
+
+
+        .about-container {
+            /* font-family: 'pixel', sans-serif; */
+            font-size: 15px;
+            /* background-color: rgb(117, 110, 121); */
+            padding: 2em;
+    margin-bottom: 10vh;
+
+
+        }
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/portfolio.css">
     <link rel="stylesheet" href="./assets/styles/skills.css">
     <link rel="stylesheet" href="./assets/styles/screen.css">
+    <link rel="stylesheet" href="./assets/styles/education.css">
 
     <script type="module" src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
@@ -40,15 +41,6 @@
             position: relative;
         }
 
-        #about,
-        #education,
-        #skills,
-        #portfolio,
-        #socials {
-            margin-bottom: 10em;
-            /* position: relative; */
-        }
-
         #about-link,
         #education-link,
         #skills-link,
@@ -67,14 +59,6 @@
             left: 11%;
         }
 
-        #education-link {
-            bottom: 45%;
-            left: 33%;
-        }
-
-
-
-
         #socials-link {
             bottom: 75%;
             left: 46%;
@@ -87,46 +71,14 @@
             display: block;
         }
 
-
-        .education-card {
-            display: flex;
-            flex-direction: row;
-            /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-            font-family: 'pixel', sans-serif;
-            font-size: 21px;
-            padding: 1em;
-        }
-
-        .about-container {
-            /* font-family: 'pixel', sans-serif; */
-            font-size: 15px;
-            /* background-color: rgb(117, 110, 121); */
-            padding: 2em;
-
-        }
-
-        .education-container {
-            display: flex;
-            flex-direction: column;
-        }
-
         a {
             text-decoration: none;
         }
 
-        .education-card ul {
-            list-style: none;
-        }
 
         #music-app-image {
             width: 100%;
 
-        }
-
-
-
-        .education-card p {
-            width: 13%;
         }
 
 
@@ -137,13 +89,6 @@
         .github-image:hover {
             transform: scale(1.2)
         }
-
-
-
-        .education-card-details {
-            width: 90%;
-        }
-
 
         .icons {
             display: flex;
@@ -171,13 +116,7 @@
         }
 
 
-
-
-
-
-        #contact {
-            margin-top: 4em;
-        }
+       
     </style>
 
 </head>
@@ -231,10 +170,11 @@
 
 
     </section>
-    <section class="info">
 
-
+    <section class="about-container">
+        <div class="spacer layer2" id="layer2-up"> </div>
         <article id="about">
+
             <h2>About</h2>
 
             <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
@@ -261,270 +201,265 @@
                     </a>
 
                 </article>
-            </div>
 
 
         </article>
-
-
-        <article id="education">
-            <div class="glowing">
-                <span style="--i:1;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:3;"></span>
-                <span style="--i:4;"></span>
-                <span style="--i:5;"></span>
-                <span style="--i:6"></span>
-            </div>
-            <h2>Education</h2>
-            <div class="education-container">
-                <div class="education-card">
-                    <p>Oct 2023- Jan 2024</p>
-                    <div class="education-card-details">
-                        <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
-                        <ul>
-                            <li>📘 Acquired comprehensive knowledge and hands-on experience in full stack development,
-                                spanning front-end technologies (HTML, CSS, React) to back-end technologies (Node.js,
-                                Express, databases).</li>
-                            <li>🛠 Demonstrated competence in utilizing Git, version control, and containerization,
-                                contributing to the collaborative development of projects during dedicated Learn and
-                                Project Weeks.</li>
-                            <li>🔍 Applied problem-solving skills through debugging assignments, participating in
-                                hackathons, and delivering impactful project presentations.</li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="education-card">
-                    <p>Jul 2023- Sep 2023</p>
-                    <div class="education-card-details">
-                        <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp, Remote </b>
-                        <ul>
-                            <li>🚀 Developed and maintained pixel-perfect, mobile-friendly web pages, ensuring optimal
-                                user experience across various devices.</li>
-                            <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
-                                high-quality, interactive features.</li>
-                            <li>&#9989; Pass rate with over 90% on assessments.</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <p>Sep 2016- Jul 2020</p>
-                    <div class="education-card-details">
-                        <b>University of Glasgow, School of Life Sciences, Glasgow</b>
-                        <ul>
-                            <li>🎓 Bachelor of Science in Zoology, 2.1 achieved.</li>
-                            <li>📊 Utilized R-Studio and applied experimental design principles to perform statistical
-                                analysis and generate illustrative data representations in a study focused on the impact
-                                of circadian disruption on aging.</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-            </div>
-            <article>
-                <h2>Work Experience</h2>
-                <div class="education-container">
-                    <div class="education-card">
-                        <p>Jul 2022- Jul 2023</p>
-                        <div class="education-card-details">
-                            <b>Software Developer Consultant, FDM, London</b>
-                            <ul>
-                                <li>🔨 Developed web app backends using Java Spring Framework and MYSQL, implementing
-                                    test-driven development and internal API creation. Achieved an impressive test
-                                    coverage
-                                    of over 90%.</li>
-                                <li>🚀 Developed reusable React components, elevating user interfaces and optimizing
-                                    performance in web applications. Implemented best practices for code modularity and
-                                    maintainability, resulting in a 20% increase in application responsiveness.</li>
-                                <li>🐞 Successfully identified and resolved an average of ten software defects per
-                                    sprint,
-                                    demonstrating a strong problem-solving mindset. Collaborated closely with senior
-                                    team
-                                    members, resulting in a 15% improvement in code quality and functionality.</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-        </article>
-
-        <article id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-container">
-                <div class="portfolio-card">
-                    <a href="https://pockche123.github.io/ohmyfood/">
-                        <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
-                    </a>
-                    <div class="icons">
-                        <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
-                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                alt="github" class="github-image" />
-                        </a>
-
-                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass" />
-                    </div>
-                </div>
-
-
-                <div class="portfolio-card">
-                    <a href="https://resonance-music-app.netlify.app/">
-                        <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class="portfolio-image">
-                    </a>
-                    <div class="icons">
-                        <a href="https://github.com/pockche123/musicApp" target="_blank">
-                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                alt="github" class="github-image" />
-                        </a>
-                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
-                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png"
-                            alt="react" />
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <a href="https://www.youtube.com/watch?v=kpvrcBY2m5U" target="_blank">
-                        <img src="./img/noteworthy.jpg" alt="noteworthy" class="portfolio-image">
-                    </a>
-
-                    <div class="icons">
-                        <a href="https://github.com/pockche123/notesApp" target="_blank">
-                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                class="github-image">
-                        </a>
-                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
-                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png"
-                            alt="react" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png"
-                            alt="nodejs" />&nbsp;
-                        <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
-                            alt="express-js" />
-
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/mongodb.png" alt="mongodb" />
-                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <a href="https://www.youtube.com/watch?v=afNW69mkX4A" target="_blank">
-                        <img src="./img/florin.jpg" alt="florin-pic" class="portfolio-image">
-                    </a>
-                    <div class="icons">
-                        <a href="https://github.com/pockche123/reddy22_server" target="_blank">
-                            <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
-                                class="github-image">
-                        </a>
-                        <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
-                            alt="html-5--v1" />
-                        <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png"
-                            alt="javascript--v1" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png"
-                            alt="nodejs" />&nbsp;
-                        <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png"
-                            alt="express-js" />
-                        <img width="96" height="96" src="https://img.icons8.com/color/96/postgreesql.png"
-                            alt="postgreesql" />
-                        <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="all-github">
-                <a href="https://github.com/pockche123" target="_blank">
-                    <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github" />
-
-                </a>
-
-                <img width="80" height="80" src='./assets/icons8-left-arrow.gif' alt="arrow" />
-                <!-- <div class="arrow"></div> -->
-                <h2>Checkout my github for more projects!</h2>
-            </div>
-            <div class="spacer layer1"></div>
-
-
-            <div class="custom-shape-divider-top-1703875443">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-
-        </article>
-
-
-        <article id="skills">
-
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skills-card">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>HTML5 - 2 years</li>
-                        <li>CSS - 2 years</li>
-                        <li>JavaScript - 2 years</li>
-                        <li>TypeScript - 1 year</li>
-                        <li>React - 2 years</li>
-                        <li>Java - 2 years</li>
-                        <li>Node.js - 1 year</li>
-                        <li>SQL - 2 years</li>
-                        <li>MongoDb - 1 year</li>
-                        <li>Github - 1 year</li>
-                        <li>Gitlab - 1 year</li>
-                        <li>Docker - 1 year</li>
-                    </ul>
-                </div>
-                <div class="skills-card">
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Communication - 5 years</li>
-                        <li>Problem-solving - 4 years</li>
-                        <li>Team Collaboration - 5 years</li>
-                    </ul>
-                </div>
-                <div class="skills-card">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>Agile - 2 years</li>
-                    </ul>
-                </div>
-            </div>
-
-            <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-
-                <g transform="translate(458.6547698835566 235.04654957302284)">
-                    <path id="blob1"
-                        d="M165.3 -148.8C204.3 -126.3 219.2 -63.2 214.9 -4.2C210.7 54.7 187.4 109.4 148.4 154.4C109.4 199.4 54.7 234.7 5.5 229.1C-43.6 223.6 -87.2 177.2 -118.4 132.2C-149.5 87.2 -168.3 43.6 -172.2 -3.9C-176 -51.4 -165.1 -102.8 -133.9 -125.3C-102.8 -147.8 -51.4 -141.4 5.9 -147.3C63.2 -153.2 126.3 -171.3 165.3 -148.8"
-                        fill="#920e45"></path>
-                </g>
-                <g transform="translate(517.4785465864011 236.96925290586165)">
-                    <path id="blob2"
-                        d="M93.4 -160.2C122.9 -144.9 149.8 -123.4 156.3 -95.7C162.8 -68 148.9 -34 147.2 -1C145.4 32 155.9 64 154.2 100.1C152.5 136.2 138.8 176.3 111 205.3C83.3 234.3 41.7 252.2 4.5 244.4C-32.7 236.6 -65.3 203.2 -97.5 176.7C-129.7 150.3 -161.4 130.9 -187.6 102.6C-213.7 74.3 -234.4 37.2 -232.9 0.8C-231.5 -35.5 -208 -71 -177.5 -91.8C-147 -112.6 -109.5 -118.6 -78.7 -133.2C-48 -147.8 -24 -170.9 4 -177.8C32 -184.8 64 -175.5 93.4 -160.2"
-                        fill="#920e45"></path>
-                </g>
-            </svg>
-        
-        </article>
-        <!-- <div class="spacer layer1 flip"></div> -->
+        <div class="spacer layer2 flip" id="layer2-down"></div>
     </section>
 
 
+
+    <article id="education">
+        <div class="glowing">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6"></span>
+        </div>
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <p>Oct 2023- Jan 2024</p>
+                <div class="education-card-details">
+                    <b>La Fosse Academy, Software Development Bootcamp, Remote </b>
+                    <ul>
+                        <li>📘 Acquired comprehensive knowledge and hands-on experience in full stack development,
+                            spanning front-end technologies (HTML, CSS, React) to back-end technologies (Node.js,
+                            Express, databases).</li>
+                        <li>🛠 Demonstrated competence in utilizing Git, version control, and containerization,
+                            contributing to the collaborative development of projects during dedicated Learn and
+                            Project Weeks.</li>
+                        <li>🔍 Applied problem-solving skills through debugging assignments, participating in
+                            hackathons, and delivering impactful project presentations.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="education-card">
+                <p>Jul 2023- Sep 2023</p>
+                <div class="education-card-details">
+                    <b>Open Classrooms, Digital Skills Front-End Web Development Bootcamp, Remote </b>
+                    <ul>
+                        <li>🚀 Developed and maintained pixel-perfect, mobile-friendly web pages, ensuring optimal
+                            user experience across various devices.</li>
+                        <li>💡 Collaborated closely with the design team, translating wireframes and mockups into
+                            high-quality, interactive features.</li>
+                        <li>&#9989; Pass rate with over 90% on assessments.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="education-card">
+                <p>Sep 2016- Jul 2020</p>
+                <div class="education-card-details">
+                    <b>University of Glasgow, School of Life Sciences, Glasgow</b>
+                    <ul>
+                        <li>🎓 Bachelor of Science in Zoology, 2.1 achieved.</li>
+                        <li>📊 Utilized R-Studio and applied experimental design principles to perform statistical
+                            analysis and generate illustrative data representations in a study focused on the impact
+                            of circadian disruption on aging.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <article>
+            <h2>Work Experience</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <p>Jul 2022- Jul 2023</p>
+                    <div class="education-card-details">
+                        <b>Software Developer Consultant, FDM, London</b>
+                        <ul>
+                            <li>🔨 Developed web app backends using Java Spring Framework and MYSQL, implementing
+                                test-driven development and internal API creation. Achieved an impressive test
+                                coverage
+                                of over 90%.</li>
+                            <li>🚀 Developed reusable React components, elevating user interfaces and optimizing
+                                performance in web applications. Implemented best practices for code modularity and
+                                maintainability, resulting in a 20% increase in application responsiveness.</li>
+                            <li>🐞 Successfully identified and resolved an average of ten software defects per
+                                sprint,
+                                demonstrating a strong problem-solving mindset. Collaborated closely with senior
+                                team
+                                members, resulting in a 15% improvement in code quality and functionality.</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </article>
+
+    <article id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-card">
+                <a href="https://pockche123.github.io/ohmyfood/">
+                    <img src="./img/ohmyfood.jpg" alt="myfood" class="portfolio-image">
+                </a>
+                <div class="icons">
+                    <a href="https://github.com/pockche123/ohmyfood?tab=readme-ov-file" target="_blank">
+                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                            alt="github" class="github-image" />
+                    </a>
+
+                    <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                        alt="html-5--v1" />
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/sass.png" alt="sass" />
+                </div>
+            </div>
+
+
+            <div class="portfolio-card">
+                <a href="https://resonance-music-app.netlify.app/">
+                    <img src="./img/music-app.jpg" alt="music-app" id="music-app-image" class="portfolio-image">
+                </a>
+                <div class="icons">
+                    <a href="https://github.com/pockche123/musicApp" target="_blank">
+                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                            alt="github" class="github-image" />
+                    </a>
+                    <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                        alt="html-5--v1" />
+                    <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                    <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png" alt="react" />
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <a href="https://www.youtube.com/watch?v=kpvrcBY2m5U" target="_blank">
+                    <img src="./img/noteworthy.jpg" alt="noteworthy" class="portfolio-image">
+                </a>
+
+                <div class="icons">
+                    <a href="https://github.com/pockche123/notesApp" target="_blank">
+                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                            class="github-image">
+                    </a>
+                    <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                        alt="html-5--v1" />
+                    <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                    <img width="100" height="100" src="https://img.icons8.com/plasticine/100/react.png" alt="react" />
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png" alt="nodejs" />&nbsp;
+                    <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png" alt="express-js" />
+
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/mongodb.png" alt="mongodb" />
+                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <a href="https://www.youtube.com/watch?v=afNW69mkX4A" target="_blank">
+                    <img src="./img/florin.jpg" alt="florin-pic" class="portfolio-image">
+                </a>
+                <div class="icons">
+                    <a href="https://github.com/pockche123/reddy22_server" target="_blank">
+                        <img width="95" height="95" src="https://img.icons8.com/glyph-neue/128/FFFFFF/github.png"
+                            class="github-image">
+                    </a>
+                    <img width="100" height="100" src="https://img.icons8.com/color/480/html-5--v1.png"
+                        alt="html-5--v1" />
+                    <img width="100" height="100" src="https://img.icons8.com/fluency/96/css3.png" alt="css3" />
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/javascript--v1.png"
+                        alt="javascript--v1" />
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/nodejs.png" alt="nodejs" />&nbsp;
+                    <img width="60" height="60" src="https://img.icons8.com/ios/50/express-js.png" alt="express-js" />
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/postgreesql.png"
+                        alt="postgreesql" />
+                    <img width="96" height="96" src="https://img.icons8.com/fluency/96/docker.png" alt="docker" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="all-github">
+            <a href="https://github.com/pockche123" target="_blank">
+                <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github" />
+
+            </a>
+
+            <img width="80" height="80" src='./assets/icons8-left-arrow.gif' alt="arrow" />
+            <!-- <div class="arrow"></div> -->
+            <h2>Checkout my github for more projects!</h2>
+        </div>
+        
+
+
+        <div class="custom-shape-divider-top-1703875443">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+    </article>
+
+  <section class="skills-section">
+    <article id="skills">
+<div class="spacer layer1"></div>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skills-card">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>HTML5 - 2 years</li>
+                    <li>CSS - 2 years</li>
+                    <li>JavaScript - 2 years</li>
+                    <li>TypeScript - 1 year</li>
+                    <li>React - 2 years</li>
+                    <li>Java - 2 years</li>
+                    <li>Node.js - 1 year</li>
+                    <li>SQL - 2 years</li>
+                    <li>MongoDb - 1 year</li>
+                    <li>Github - 1 year</li>
+                    <li>Gitlab - 1 year</li>
+                    <li>Docker - 1 year</li>
+                </ul>
+            </div>
+            <div class="skills-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication - 5 years</li>
+                    <li>Problem-solving - 4 years</li>
+                    <li>Team Collaboration - 5 years</li>
+                </ul>
+            </div>
+            <div class="skills-card">
+                <h3>Other Skills</h3>
+                <ul>
+                    <li>Agile - 2 years</li>
+                </ul>
+            </div>
+        </div>
+
+        <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+            <g transform="translate(458.6547698835566 235.04654957302284)">
+                <path id="blob1"
+                    d="M165.3 -148.8C204.3 -126.3 219.2 -63.2 214.9 -4.2C210.7 54.7 187.4 109.4 148.4 154.4C109.4 199.4 54.7 234.7 5.5 229.1C-43.6 223.6 -87.2 177.2 -118.4 132.2C-149.5 87.2 -168.3 43.6 -172.2 -3.9C-176 -51.4 -165.1 -102.8 -133.9 -125.3C-102.8 -147.8 -51.4 -141.4 5.9 -147.3C63.2 -153.2 126.3 -171.3 165.3 -148.8"
+                    fill="#920e45"></path>
+            </g>
+            <g transform="translate(517.4785465864011 236.96925290586165)">
+                <path id="blob2"
+                    d="M93.4 -160.2C122.9 -144.9 149.8 -123.4 156.3 -95.7C162.8 -68 148.9 -34 147.2 -1C145.4 32 155.9 64 154.2 100.1C152.5 136.2 138.8 176.3 111 205.3C83.3 234.3 41.7 252.2 4.5 244.4C-32.7 236.6 -65.3 203.2 -97.5 176.7C-129.7 150.3 -161.4 130.9 -187.6 102.6C-213.7 74.3 -234.4 37.2 -232.9 0.8C-231.5 -35.5 -208 -71 -177.5 -91.8C-147 -112.6 -109.5 -118.6 -78.7 -133.2C-48 -147.8 -24 -170.9 4 -177.8C32 -184.8 64 -175.5 93.4 -160.2"
+                    fill="#920e45"></path>
+            </g>
+        </svg>
+
+    </article>
+    <div class="spacer layer1 flip"></div>
+
+</section>
 
 </body>
 <script>
