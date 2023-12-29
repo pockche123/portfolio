@@ -57,7 +57,7 @@ Promise.all([
         const audioContext = new AudioContext()
         const audioBoard = new AudioBoard(audioContext)
         const loadAudio = createAudioLoader(audioContext);
-        loadAudio('/audio/jump.ogg')
+        loadAudio('../assets/audio/jump.ogg')
             .then(buffer => {
                 audioBoard.addAudio('jump', buffer)
                 // audioBoard.playAudio('jump')
