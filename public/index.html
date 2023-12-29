@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/portfolio.css">
     <link rel="stylesheet" href="./assets/styles/skills.css">
+    <link rel="stylesheet" href="./assets/styles/screen.css">
 
     <script type="module" src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 
     <style>
         @import url('https://fonts.cdnfonts.com/css/super-mario-256');
         @import url('https://fonts.cdnfonts.com/css/pretendo');
+
         @font-face {
             font-family: 'nintendo';
             src: url('./assets/nintendo.ttf') format('opentype');
@@ -28,7 +31,7 @@
             src: url('./assets/VT323-Regular.ttf') format('truetype')
         }
 
-            @font-face {
+        @font-face {
             font-family: 'mario';
             src: url('./assets/fonts/prstart.ttf') format('truetype');
         }
@@ -70,7 +73,7 @@
         }
 
 
-      
+
 
         #socials-link {
             bottom: 75%;
@@ -120,7 +123,7 @@
 
         }
 
-  
+
 
         .education-card p {
             width: 13%;
@@ -135,13 +138,13 @@
             transform: scale(1.2)
         }
 
-     
+
 
         .education-card-details {
             width: 90%;
         }
 
-    
+
         .icons {
             display: flex;
             align-items: center;
@@ -163,77 +166,16 @@
 
 
         .info {
-            padding: 2em;
+
             /* margin-top: 100vh; */
         }
 
 
-   
-
-        #screen-container {
-            position: relative;
-        }
-
-        #volume-on {
-            position: absolute;
-            top: 0;
-            left: 10px;
-            color: white;
-            cursor: pointer;
-
-
-        }
-
-
-        #instruction-icon {
-            position: absolute;
-            top: 4px;
-            left: 70px;
-            cursor: pointer;
-
-        }
-
-        .instruction-container {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #instruction {
-            background-color: rgb(117, 110, 121);
-            padding: 2em;
-            z-index: 10;
-            position: absolute;
-            width: 85%;
-            left: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -70%);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border: 8px solid white;
-
-        }
-
-        .instruction-card {
-            position: relative;
-        }
-
-        #instruction li {
-            margin-bottom: 5px;
-        }
 
 
 
-        #close {
-            position: absolute;
-            right: 0;
-            top: -40px;
-            font-size: x-large;
-            cursor: pointer;
-        }
 
-
-        #contact{
+        #contact {
             margin-top: 4em;
         }
     </style>
@@ -242,7 +184,7 @@
 
 <body>
 
-    
+
     <section id="screen-container">
         <div id="instruction">
             <section class="instruction-card">
@@ -294,59 +236,46 @@
 
         <article id="about">
             <h2>About</h2>
-            
-                <img src="./img/profile-pic4.jpg" alt="profile-pic"  class="profile-pic">
-                
+
+            <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic">
+
             <div class="about-container">
                 <h1>Parjal Rai</h1>
                 <b>Full-Stack Developer | 2 years experience</b>
-                
+
                 <p class="line-space">Hey there! 👋 I'm a coding enthusiast who loves crafting cool and
-   user-friendly websites. From the magic of HTML, CSS, and JavaScript on the
-   front-end to the wizardry of Node.js and Java on the back-end – I've got
-   you covered!</p>
+                    user-friendly websites. From the magic of HTML, CSS, and JavaScript on the
+                    front-end to the wizardry of Node.js and Java on the back-end – I've got
+                    you covered!</p>
 
-<p class="line-space">Check out my portfolio for some exciting projects. I'm
-   open to new gigs and collaborations, so let's team up and build something
-   amazing together!</p>
-      <article id="contact">
-            <h3>Contact Me</h3>
-            <a href="mailto:bayingray123@gmail.com">
-                <img width="110" height="90" src="./img/mail.png" alt="mail" />
-            </a>
-            <a href="https://www.linkedin.com/in/parjal-rai-3853b7164/" target="_blank">
-                <img width="80" height="80" src="./img/linkedin.png" alt="linkedin" />
-            </a>
+                <p class="line-space">Check out my portfolio for some exciting projects. I'm
+                    open to new gigs and collaborations, so let's team up and build something
+                    amazing together!</p>
+                <article id="contact">
+                    <h3>Contact Me</h3>
+                    <a href="mailto:bayingray123@gmail.com">
+                        <img width="110" height="90" src="./img/mail.png" alt="mail" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/parjal-rai-3853b7164/" target="_blank">
+                        <img width="80" height="80" src="./img/linkedin.png" alt="linkedin" />
+                    </a>
 
-        </article>
+                </article>
             </div>
-    
-            
+
+
         </article>
+
 
         <article id="education">
-                 <div class="glowing">
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
-        <span style="--i:4;"></span>
-        <span style="--i:5;"></span>
-        <span style="--i:6"></span>
-    </div>
-            <!-- <div class="glowing-container"> -->
-
-      
-        <!-- <div class="glowing">
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
-    </div> 
-       <div class="glowing">
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
-    </div>   -->
-<!-- </div> -->
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:6"></span>
+            </div>
             <h2>Education</h2>
             <div class="education-container">
                 <div class="education-card">
@@ -527,12 +456,15 @@
             <div class="spacer layer1"></div>
 
 
-<div class="custom-shape-divider-top-1703875443">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-</div>
-        
+            <div class="custom-shape-divider-top-1703875443">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
         </article>
 
 
@@ -572,11 +504,37 @@
                     </ul>
                 </div>
             </div>
+
+            <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+
+                <g transform="translate(458.6547698835566 235.04654957302284)">
+                    <path id="blob1"
+                        d="M165.3 -148.8C204.3 -126.3 219.2 -63.2 214.9 -4.2C210.7 54.7 187.4 109.4 148.4 154.4C109.4 199.4 54.7 234.7 5.5 229.1C-43.6 223.6 -87.2 177.2 -118.4 132.2C-149.5 87.2 -168.3 43.6 -172.2 -3.9C-176 -51.4 -165.1 -102.8 -133.9 -125.3C-102.8 -147.8 -51.4 -141.4 5.9 -147.3C63.2 -153.2 126.3 -171.3 165.3 -148.8"
+                        fill="#920e45"></path>
+                </g>
+                <g transform="translate(517.4785465864011 236.96925290586165)">
+                    <path id="blob2"
+                        d="M93.4 -160.2C122.9 -144.9 149.8 -123.4 156.3 -95.7C162.8 -68 148.9 -34 147.2 -1C145.4 32 155.9 64 154.2 100.1C152.5 136.2 138.8 176.3 111 205.3C83.3 234.3 41.7 252.2 4.5 244.4C-32.7 236.6 -65.3 203.2 -97.5 176.7C-129.7 150.3 -161.4 130.9 -187.6 102.6C-213.7 74.3 -234.4 37.2 -232.9 0.8C-231.5 -35.5 -208 -71 -177.5 -91.8C-147 -112.6 -109.5 -118.6 -78.7 -133.2C-48 -147.8 -24 -170.9 4 -177.8C32 -184.8 64 -175.5 93.4 -160.2"
+                        fill="#920e45"></path>
+                </g>
+            </svg>
+        
         </article>
+        <!-- <div class="spacer layer1 flip"></div> -->
     </section>
 
 
+
 </body>
+<script>
+    const tween = KUTE.fromTo(
+        '#blob1',
+        { path: '#blob1' },
+        { path: '#blob2' },
+        { repeat: 999, duration: 3000, yoyo: true }
+    ).start();
+</script>
 
 <script>
     // JavaScript for smooth scroll
@@ -593,7 +551,7 @@
 
         const close = document.getElementById('close')
         const instructionIcon = document.getElementById('instruction-icon')
-const instruction = document.getElementById('instruction')
+        const instruction = document.getElementById('instruction')
 
 
         if (close) {
@@ -603,11 +561,11 @@ const instruction = document.getElementById('instruction')
             console.log("close clicked")
             instruction.style.display = 'none';
         }
-        if(instructionIcon){
-        instructionIcon.addEventListener('click', openInstructions)
+        if (instructionIcon) {
+            instructionIcon.addEventListener('click', openInstructions)
         }
 
-            function openInstructions() {
+        function openInstructions() {
             console.log("open clicked")
             instruction.style.display = 'block';
         }
