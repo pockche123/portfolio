@@ -10,6 +10,8 @@
     <!-- Import stylesheets -->
     <link rel="stylesheet" href="./assets/styles/about.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/portfolio.css">
+    <link rel="stylesheet" href="./assets/styles/skills.css">
 
     <script type="module" src="/js/main.js"></script>
 
@@ -41,6 +43,7 @@
         #portfolio,
         #socials {
             margin-bottom: 10em;
+            /* position: relative; */
         }
 
         #about-link,
@@ -66,15 +69,8 @@
             left: 33%;
         }
 
-        #skills-link {
-            bottom: 51%;
-            left: 47%;
-        }
 
-        #portfolio-link {
-            bottom: 45%;
-            left: 57%;
-        }
+      
 
         #socials-link {
             bottom: 75%;
@@ -124,31 +120,12 @@
 
         }
 
-        .portfolio-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .portfolio-card {
-            flex-basis: calc(48% - 0.6rem);
-            /* Adjust the value accordingly */
-            margin: 1.2rem;
-            background-color: gainsboro;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-
-        }
+  
 
         .education-card p {
             width: 13%;
         }
 
-        .portfolio-image {
-            transition: 0.3s ease-in-out;
-            width: 100%;
-        }
 
         .github-image {
             transition: 0.3s ease-in-out;
@@ -158,19 +135,13 @@
             transform: scale(1.2)
         }
 
-        .portfolio-image:hover {
-            transform: scale(1.03);
-        }
+     
 
         .education-card-details {
             width: 90%;
         }
 
-        .portfolio-video {
-            width: 100%;
-            object-fit: cover;
-        }
-
+    
         .icons {
             display: flex;
             align-items: center;
@@ -197,15 +168,7 @@
         }
 
 
-        .all-github {
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            background: gold;
-            align-items: center;
-            color: black;
-            background-color: white;
-        }
+   
 
         #screen-container {
             position: relative;
@@ -280,7 +243,7 @@
 <body>
 
     
-    <div id="screen-container">
+    <section id="screen-container">
         <div id="instruction">
             <section class="instruction-card">
                 <p id="close">X</p>
@@ -324,8 +287,10 @@
             <h3>Contact me</h3>
         </a>
 
-    </div>
+
+    </section>
     <section class="info">
+
 
         <article id="about">
             <h2>About</h2>
@@ -355,6 +320,7 @@
 
         </article>
             </div>
+    
             
         </article>
 
@@ -547,6 +513,7 @@
                 </div>
             </div>
 
+
             <div class="all-github">
                 <a href="https://github.com/pockche123" target="_blank">
                     <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/github.png" alt="github" />
@@ -557,10 +524,21 @@
                 <!-- <div class="arrow"></div> -->
                 <h2>Checkout my github for more projects!</h2>
             </div>
+            <div class="spacer layer1"></div>
 
 
+            <!-- <div class="custom-shape-divider-top-1703870185">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div> -->
+
+        
         </article>
+
+
         <article id="skills">
+
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skills-card">
@@ -596,9 +574,6 @@
                 </div>
             </div>
         </article>
-
-     
-
     </section>
 
 
