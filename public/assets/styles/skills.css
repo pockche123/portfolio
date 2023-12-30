@@ -1,7 +1,9 @@
 
         #skills-link {
-            bottom: 51%;
-            left: 47%;
+         
+
+                bottom: 45%;
+            left: 57%;
         }
 
         #skills{
@@ -26,3 +28,15 @@
     position: relative;
 
 } */
+
+        .skills-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            font-size: 15px;
+
+        }
+
+        .skills-card li {
+            margin-bottom: 10px;
+        }

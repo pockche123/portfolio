@@ -59,3 +59,13 @@
             font-size: x-large;
             cursor: pointer;
         }
+
+            #screen {
+            margin-top: 2em;
+            height: 95vh;
+            margin: auto;
+            display: block;
+        }
+
+
+

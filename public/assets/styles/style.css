@@ -1,3 +1,21 @@
+           @import url('https://fonts.cdnfonts.com/css/super-mario-256');
+        @import url('https://fonts.cdnfonts.com/css/pretendo');
+
+        @font-face {
+            font-family: 'nintendo';
+            src: url('../fonts/nintendo.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'pixel';
+            src: url('../fonts/VT323-Regular.ttf') format('truetype')
+        }
+
+        @font-face {
+            font-family: 'mario';
+            src: url('../fonts/prstart.ttf') format('truetype');
+        }
+    
     body {
         background-color: #202731;
         margin: 0;
@@ -231,3 +249,4 @@
     transform: rotate(180deg);
     /* bottom: 0;  */
 }
+
