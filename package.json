@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./public -o"
+    "start": "serve ./public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "serve": "^14.2.1"
   }
 }

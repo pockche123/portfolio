@@ -272,3 +272,49 @@ body {
     top: 0;
     z-index: -1;
 }
+
+.hidden{
+ opacity: 0; 
+ transition: all 1s; 
+ /* filter: blur(5px);
+ transform: translateX(-100%); 
+ transition: all 1s;  */
+}
+
+.show{
+
+    opacity: 1;
+    /* filter: blur(0); 
+    transform: translateX(0);  */
+
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+/* For Webkit browsers like Chrome or Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: whitesmoke transparent;
+}
+
+
+*::-ms-scrollbar {
+  width: 5px;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: whitesmoke;
+}
