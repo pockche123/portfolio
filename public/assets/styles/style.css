@@ -1,45 +1,45 @@
-           @import url('https://fonts.cdnfonts.com/css/super-mario-256');
-        @import url('https://fonts.cdnfonts.com/css/pretendo');
+@import url('https://fonts.cdnfonts.com/css/super-mario-256');
+@import url('https://fonts.cdnfonts.com/css/pretendo');
 
-        @font-face {
-            font-family: 'nintendo';
-            src: url('../fonts/nintendo.ttf') format('opentype');
-        }
+@font-face {
+    font-family: 'nintendo';
+    src: url('../fonts/nintendo.ttf') format('opentype');
+}
 
-        @font-face {
-            font-family: 'pixel';
-            src: url('../fonts/VT323-Regular.ttf') format('truetype')
-        }
+@font-face {
+    font-family: 'pixel';
+    src: url('../fonts/VT323-Regular.ttf') format('truetype')
+}
 
-        @font-face {
-            font-family: 'mario';
-            src: url('../fonts/prstart.ttf') format('truetype');
-        }
-    
-    body {
-        background-color: #202731;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-family: 'mario', sans-serif;
-        font-size: large;
-        min-height: 100vh;
-        width: 100%;
-        overflow-x: hidden;
-       
+@font-face {
+    font-family: 'mario';
+    src: url('../fonts/prstart.ttf') format('truetype');
+}
 
-    }
+body {
+    background-color: #202731;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'mario', sans-serif;
+    font-size: large;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 
-    /* .glowing-container {
+
+}
+
+/* .glowing-container {
         display: flex;
         flex-direction: row;
     } */
 
-    /* .glowing {
+/* .glowing {
         position: relative;
         min-width: 750px;
         height: 750px;
@@ -48,115 +48,116 @@
         animation: colorChange 5s linear infinite;
     } */
 
-    .glowing:nth-child(even) {
-        transform-origin: left;
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+
+#education {
+    position: relative;
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
     }
 
-    #education{
-        position: relative; 
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
     }
-
-    @keyframes colorChange {
-        0% {
-            filter: hue-rotate(0deg);
-            transform: rotate(0deg);
-        }
-
-        100% {
-            filter: hue-rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
+}
 
 
-    .glowing span {
-        position: absolute;
-        top: calc(80px * var(--i));
-        left: calc(80px * var(--i));
-        bottom: calc(80px * var(--i));
-        right: calc(80px * var(--i));
-    }
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
 
-    .glowing span:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -8px;
-        width: 10px;
-        height: 10px;
-        background: #f00;
-        border-radius: 50%;
-    }
+.glowing span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    border-radius: 50%;
+}
 
-    .glowing span:nth-child(6n+1)::before {
-        background: rgba(134, 255, 0, 1);
-        box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-            0 0 40px rgba(134, 255, 0, 1),
-            0 0 60px rgba(134, 255, 0, 1),
-            0 0 80px rgba(134, 255, 0, 1),
-            0 0 0 8px rgba(134, 255, 0, .1);
-    }
+.glowing span:nth-child(6n+1)::before {
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+        0 0 40px rgba(134, 255, 0, 1),
+        0 0 60px rgba(134, 255, 0, 1),
+        0 0 80px rgba(134, 255, 0, 1),
+        0 0 0 8px rgba(134, 255, 0, .1);
+}
 
-    .glowing span:nth-child(6n+2)::before {
-        background: rgba(255, 214, 0, 1);
-        box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-            0 0 40px rgba(255, 214, 0, 1),
-            0 0 60px rgba(255, 214, 0, 1),
-            0 0 80px rgba(255, 214, 0, 1),
-            0 0 0 8px rgba(255, 214, 0, .1);
-    }
+.glowing span:nth-child(6n+2)::before {
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+        0 0 40px rgba(255, 214, 0, 1),
+        0 0 60px rgba(255, 214, 0, 1),
+        0 0 80px rgba(255, 214, 0, 1),
+        0 0 0 8px rgba(255, 214, 0, .1);
+}
 
-    .glowing span:nth-child(6n+3)::before {
-        background: rgba(0, 226, 255, 1);
-        box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-            0 0 40px rgba(0, 226, 255, 1),
-            0 0 60px rgba(0, 226, 255, 1),
-            0 0 80px rgba(0, 226, 255, 1),
-            0 0 0 8px rgba(0, 226, 255, .1);
-    }
+.glowing span:nth-child(6n+3)::before {
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+        0 0 40px rgba(0, 226, 255, 1),
+        0 0 60px rgba(0, 226, 255, 1),
+        0 0 80px rgba(0, 226, 255, 1),
+        0 0 0 8px rgba(0, 226, 255, .1);
+}
 
-    .glowing span:nth-child(6n+1) {
-        animation: animate 10s alternate infinite;
+.glowing span:nth-child(6n+1) {
+    animation: animate 10s alternate infinite;
 
-    }
+}
 
-    .glowing span:nth-child(6n+2) {
-        animation: animate-reverse 10s alternate infinite;
+.glowing span:nth-child(6n+2) {
+    animation: animate-reverse 10s alternate infinite;
 
-    }
+}
 
-    .glowing span:nth-child(6n+3) {
-        animation: animate 8s alternate infinite;
-    }
-
-
-    @keyframes animate {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+.glowing span:nth-child(6n+3) {
+    animation: animate 8s alternate infinite;
+}
 
 
-    @keyframes animate-reverse {
-        0% {
-            transform: rotate(360deg);
-        }
-
-        100% {
-            transform: rotate(0deg);
-        }
-    }
-
-
-
-    @keyframes rotate360 {
+@keyframes animate {
     0% {
         transform: rotate(0deg);
     }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
     100% {
         transform: rotate(360deg);
     }
@@ -166,6 +167,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
@@ -175,6 +177,7 @@
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.5);
     }
@@ -220,14 +223,14 @@
 }
 
 
-#screen-container{
+#screen-container {
     position: relative;
 }
 
 
-.spacer{
+.spacer {
     aspect-ratio: 900/550;
-    width: 100%; 
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -236,17 +239,16 @@
 
 }
 
-.layer1{
+.layer1 {
     background-image: url('../../img/layered-waves-haikei.svg');
 
 }
 
-.layer2{
+.layer2 {
     background-image: url('../../img/waves.svg');
 }
 
-.flip{
+.flip {
     transform: rotate(180deg);
     /* bottom: 0;  */
 }
-
