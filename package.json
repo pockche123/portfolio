@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./public -o",
-    "build": "npm install && npm run start"
+    "start": "http-server ./public -o"
   },
   "keywords": [],
   "author": "",
