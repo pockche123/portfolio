@@ -2,7 +2,8 @@
     overflow: hidden;
     min-height: 100vh;
     position: relative;
-    background-color: whitesmoke;
+    /* background: linear-gradient(to bottom, whitesmoke, white); */
+    background: white;
     color: black;
 
 }
@@ -21,6 +22,7 @@
     border-radius: 6px;
     padding: 2em;
     font-size: 15px;
+    
 }
 
 .about-container {
@@ -72,8 +74,12 @@
 
 
 #about {
-    margin-top: 5em;
+    margin-top: 20em;
     padding: 1em;
+    position: relative;
+    z-index: -1;
+    padding-top: 0;
+
 }
 
 

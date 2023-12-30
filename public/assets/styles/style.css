@@ -229,26 +229,46 @@ body {
 
 
 .spacer {
-    aspect-ratio: 900/550;
+    aspect-ratio: 960/540;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: absolute;
-    z-index: -1;
+    /* z-index: -100; */
 
 }
 
+.spacer2 {
+    aspect-ratio: 900/640;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    /* z-index: -100; */
+
+}
 .layer1 {
     background-image: url('../../img/layered-waves-haikei.svg');
 
 }
 
 .layer2 {
-    background-image: url('../../img/waves.svg');
+    background-image: url('../../img/top-layer.svg');
 }
 
 .flip {
     transform: rotate(180deg);
     /* bottom: 0;  */
+}
+
+.info{
+    position: relative;
+}
+
+#top-wave{
+    position: absolute; 
+    top: 0;
+    z-index: -1;
 }
