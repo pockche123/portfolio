@@ -1,0 +1,33 @@
+#skills-link {
+    bottom: 45%;
+    left: 57%;
+}
+
+#skills {
+    padding: 15em 1em;
+    padding-bottom: 3em;
+    position: relative;
+    z-index: 100;
+}
+
+#visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 15px;
+
+}
+
+.skills-card li {
+    margin-bottom: 10px;
+}

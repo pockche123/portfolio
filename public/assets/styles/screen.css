@@ -1,0 +1,71 @@
+    #screen-container {
+            position: relative;
+        }
+
+        #volume-on {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            color: white;
+            cursor: pointer;
+
+
+        }
+
+
+        #instruction-icon {
+            position: absolute;
+            top: 4px;
+            left: 70px;
+            cursor: pointer;
+
+        }
+
+        .instruction-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #instruction {
+            background-color: rgb(117, 110, 121);
+            padding: 2em;
+            z-index: 10;
+            position: absolute;
+            width: 85%;
+            left: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 8px solid white;
+
+        }
+
+        .instruction-card {
+            position: relative;
+        }
+
+        #instruction li {
+            margin-bottom: 5px;
+        }
+
+
+
+        #close {
+            position: absolute;
+            right: 0;
+            top: -40px;
+            font-size: x-large;
+            cursor: pointer;
+        }
+
+            #screen {
+            margin-top: 2em;
+            height: 95vh;
+            margin: auto;
+            display: block;
+        }
+
+
+
