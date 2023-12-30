@@ -42,3 +42,16 @@
     bottom: 45%;
     left: 33%;
 }
+
+
+.education-card:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.education-card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.education-card:nth-child(4){
+    transition-delay: 600ms;
+}
