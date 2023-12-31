@@ -55,3 +55,19 @@
 .education-card:nth-child(4){
     transition-delay: 600ms;
 }
+
+@media only screen and (max-width: 600px) {
+
+
+.glowing{
+    display: none;
+}
+
+.education-card{
+    flex-direction: column;
+}
+
+.education-card p{
+    width: 100%; 
+}
+}

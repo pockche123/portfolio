@@ -51,15 +51,6 @@
 
 
 
-/* .custom-shape-divider-top-1703870185 svg {
-    position: relative;
-    display: block;
-    width: calc(124% + 1.3px);
-    height: 232px;
-} */
-
-
-
 .all-github {
 
     display: flex;
@@ -99,3 +90,34 @@
 #portfolio h2 {
     padding: 1em;
 }
+
+.icons {
+            display: flex;
+            align-items: center;
+ }
+
+ .portfolio-card:nth-child(3), .portfolio-card:nth-child(4){
+ transition-delay: 200ms;
+ }
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+.icons{
+   display: grid; 
+   grid-template-columns: repeat(3, 1fr); 
+   
+}
+
+.portfolio-card{
+     flex: 0 0 auto;
+    width: 95%;
+}
+
+.portfolio-container{
+    justify-content: center;
+}
+}
+

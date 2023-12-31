@@ -39,3 +39,16 @@
 .skills-card:nth-child(3){
     transition-delay: 400ms;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+.skills-container{
+    flex-direction: column;
+    
+}
+
+#skills{
+    padding-top: 2em;
+}
+}
