@@ -100,6 +100,28 @@
  .portfolio-card:nth-child(3), .portfolio-card:nth-child(4){
  transition-delay: 200ms;
  }
+    #music-app-image {
+            width: 100%;
+
+        }
+
+
+
+
+        .github-image {
+            transition: 0.3s ease-in-out;
+        }
+
+        .github-image:hover {
+            transform: scale(1.2)
+        }
+
+        
+
+        a {
+            text-decoration: none;
+        }
+
 
 
 

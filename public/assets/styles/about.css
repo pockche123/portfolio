@@ -99,6 +99,15 @@
 }
 
 
+    #socials-link {
+            bottom: 75%;
+            left: 46%;
+        }
+
+
+
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -110,6 +119,10 @@
         flex-direction: column;
         align-items: center;
         margin-top: 35vh;
+    }
+
+    .line-space{
+        font-size: large;
     }
 
 

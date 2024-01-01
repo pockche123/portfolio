@@ -15,74 +15,29 @@
     <script type="module" src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script defer src="./js/app.js"></script>
-    <style>
-        #screen-container {
-            position: relative;
-        }
-
-        #about,
-        #education,
-        #skills,
-        #portfolio,
-        #socials {
-            margin-bottom: 10em;
-            /* position: relative; */
-        }
-
-        #about-link,
-        #education-link,
-        #skills-link,
-        #portfolio-link,
-        #socials-link {
-            position: absolute;
-            z-index: 1;
-            text-decoration: none;
-            color: white;
-            display: none;
-            font-family: 'mario', sans-serif;
-        }
-
-
-
-        #socials-link {
-            bottom: 75%;
-            left: 46%;
-        }
-
-
-
-
-
-
-        a {
-            text-decoration: none;
-        }
-
-
-
-        #music-app-image {
-            width: 100%;
-
-        }
-
-
-
-
-        .github-image {
-            transition: 0.3s ease-in-out;
-        }
-
-        .github-image:hover {
-            transform: scale(1.2)
-        }
-
-
-     
-    </style>
-
+    <script src="https://kit.fontawesome.com/4292108d38.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <input type="checkbox" id="check"/>
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Welcome to my portfolio!</header>
+        <ul>
+            <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            <li><a href="#education"><i class="fa-solid fa-suitcase"></i>Experience</a></li>
+            <li><a href="#portfolio"><i class="fa-solid fa-folder-closed"></i>Projects</a></li>
+            <li><a href="#skills"><i class="fa-solid fa-wrench"></i>Skills</a></li>
+
+        </ul>
+        <div class="sidebar-message">Check this out on your computer to see the nav game.</div>
+
+    </div>
 
 
     <section id="screen-container">
@@ -100,7 +55,7 @@
                         <li>Press the 'W' key to jump.</li>
                         <li>Press the 'D' key to move right.</li>
                         <li>Press the 'A' key to move left.</li>
-                        <li>Press the 'S + D'  or 'S + A' keys to sprint.</li>
+                        <li>Press the 'S + D' or 'S + A' keys to sprint.</li>
                         <li>Interact with the <img width="35" height="35" src="./img/mario-block.png" alt="block"
                                 id="block" /> to navigate to different sections.</li>
                     </ul>
@@ -137,7 +92,7 @@
         <div class="spacer layer2" id="top-wave"></div>
 
         <article id="about">
- 
+
 
             <div class="custom-shape-divider-bottom-1703946457">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -146,17 +101,17 @@
                     </path>
                 </svg>
             </div>
-           <div class="title">
-            <h2>About</h2>
+            <div class="title">
+                <h2>About</h2>
             </div>
-            
+
             <img src="./img/profile-pic4.jpg" alt="profile-pic" class="profile-pic hidden">
 
             <div class="about-container">
                 <div class="hidden">
-                
-                <h1>Parjal Rai</h1>
-                <b>Full-Stack Developer | 2 years experience</b>
+
+                    <h1>Parjal Rai</h1>
+                    <b>Full-Stack Developer | 2 years experience</b>
                 </div>
 
                 <p class="line-space hidden">Hey there! 👋 I'm a coding enthusiast who loves crafting cool and

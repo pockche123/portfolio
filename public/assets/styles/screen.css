@@ -5,7 +5,7 @@
         #volume-on {
             position: absolute;
             top: 0;
-            left: 10px;
+            left: 200px;
             color: white;
             cursor: pointer;
 
@@ -16,7 +16,7 @@
         #instruction-icon {
             position: absolute;
             top: 4px;
-            left: 70px;
+            left: 250px;
             cursor: pointer;
 
         }
@@ -31,7 +31,7 @@
             padding: 2em;
             z-index: 10;
             position: absolute;
-            width: 85%;
+            width: 70%;
             left: 50%;
             top: 50%;
             left: 50%;
@@ -65,6 +65,7 @@
             height: 95vh;
             margin: auto;
             display: block;
+            position: relative;
         }
 
 @media only screen and (max-width: 600px) {

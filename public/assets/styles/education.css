@@ -44,19 +44,19 @@
 }
 
 
-.education-card:nth-child(2){
+.education-card:nth-child(2) {
     transition-delay: 200ms;
 }
 
-.education-card:nth-child(3){
+.education-card:nth-child(3) {
     transition-delay: 400ms;
 }
 
-.education-card:nth-child(4){
+.education-card:nth-child(4) {
     transition-delay: 600ms;
 }
 
-.glowing{
+.glowing {
     position: relative;
 }
 
@@ -240,19 +240,19 @@
 @media only screen and (max-width: 600px) {
 
 
-.glowing {
-      position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
+    .glowing {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
 
-.education-card{
-    flex-direction: column;
-}
+    .education-card {
+        flex-direction: column;
+    }
 
-.education-card p{
-    width: 100%; 
-}
+    .education-card p {
+        width: 100%;
+    }
 
 
 }
