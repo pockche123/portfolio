@@ -269,8 +269,7 @@ body {
 
 #top-wave{
     position: absolute; 
-    top: 0;
-    z-index: -1;
+    top: -10%;
 }
 
 .hidden{
@@ -333,5 +332,12 @@ body {
 .info{
 width: 250vw; 
 }
+
+#top-wave{
+   
+    top: -300px;
+}
+
+
 
 }
