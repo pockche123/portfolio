@@ -44,8 +44,10 @@
 @media only screen and (max-width: 600px) {
 
 .skills-container{
+    display: flex;  
     flex-direction: column;
-    
+  margin-left: 70vw;
+  font-size: large;
 }
 
 #skills{

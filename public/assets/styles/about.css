@@ -107,11 +107,20 @@
     #about{
      
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
     }
 
-    .portfolio-pic{
-        width: 100%; 
+ 
+    
+    .title{
+    text-align: left;
+    width: 100%;
     }
 
+   
 
 }
