@@ -51,15 +51,6 @@
 
 
 
-/* .custom-shape-divider-top-1703870185 svg {
-    position: relative;
-    display: block;
-    width: calc(124% + 1.3px);
-    height: 232px;
-} */
-
-
-
 .all-github {
 
     display: flex;
@@ -99,3 +90,52 @@
 #portfolio h2 {
     padding: 1em;
 }
+
+.icons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+ }
+
+ .portfolio-card:nth-child(3), .portfolio-card:nth-child(4){
+ transition-delay: 200ms;
+ }
+    #music-app-image {
+            width: 100%;
+
+        }
+
+
+
+
+        .github-image {
+            transition: 0.3s ease-in-out;
+        }
+
+        .github-image:hover {
+            transform: scale(1.2)
+        }
+
+        
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+.portfolio-card{
+     flex: 0 0 auto;
+    width: 95%;
+}
+
+.portfolio-container{
+    justify-content: center;
+}
+}
+

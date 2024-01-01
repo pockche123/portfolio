@@ -44,14 +44,216 @@
 }
 
 
-.education-card:nth-child(2){
+.education-card:nth-child(2) {
     transition-delay: 200ms;
 }
 
-.education-card:nth-child(3){
+.education-card:nth-child(3) {
     transition-delay: 400ms;
 }
 
-.education-card:nth-child(4){
+.education-card:nth-child(4) {
     transition-delay: 600ms;
+}
+
+.glowing {
+    position: relative;
+}
+
+
+
+
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+
+#education {
+    position: relative;
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+
+.glowing span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(6n+1)::before {
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+        0 0 40px rgba(134, 255, 0, 1),
+        0 0 60px rgba(134, 255, 0, 1),
+        0 0 80px rgba(134, 255, 0, 1),
+        0 0 0 8px rgba(134, 255, 0, .1);
+}
+
+.glowing span:nth-child(6n+2)::before {
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+        0 0 40px rgba(255, 214, 0, 1),
+        0 0 60px rgba(255, 214, 0, 1),
+        0 0 80px rgba(255, 214, 0, 1),
+        0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(6n+3)::before {
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+        0 0 40px rgba(0, 226, 255, 1),
+        0 0 60px rgba(0, 226, 255, 1),
+        0 0 80px rgba(0, 226, 255, 1),
+        0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(6n+1) {
+    animation: animate 10s alternate infinite;
+
+}
+
+.glowing span:nth-child(6n+2) {
+    animation: animate-reverse 10s alternate infinite;
+
+}
+
+.glowing span:nth-child(6n+3) {
+    animation: animate 8s alternate infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes animate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.glowing span:nth-child(6n+4)::before {
+    background: rgb(255, 0, 149);
+    box-shadow: 0 0 20px rgba(255, 0, 149, 1),
+        0 0 40px rgba(255, 0, 149, 1),
+        0 0 60px rgba(255, 0, 149, 1),
+        0 0 80px rgba(255, 0, 149, 1),
+        0 0 0 8px rgba(255, 162, 0, .1);
+}
+
+.glowing span:nth-child(6n+5)::before {
+    background: rgb(124, 12, 136);
+    box-shadow: 0 0 20px rgba(124, 12, 136, 1),
+        0 0 40px rgba(124, 12, 136, 1),
+        0 0 60px rgba(124, 12, 136, 1),
+        0 0 80px rgba(124, 12, 136, 1),
+        0 0 0 8px rgba(255, 214, 0, .1);
+}
+
+.glowing span:nth-child(6n+6)::before {
+    background: rgb(106, 137, 158);
+    box-shadow: 0 0 20px rgba(255, 0, 51 1),
+        0 0 40px rgb(216, 217, 212),
+        0 0 60px rgb(178, 179, 174),
+        0 0 80px rgb(223, 223, 220),
+        0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(6n+4) {
+    animation: rotate360 10s alternate infinite;
+}
+
+.glowing span:nth-child(6n+5) {
+    animation: rotateReverse 10s alternate infinite;
+}
+
+.glowing span:nth-child(6n+6) {
+    animation: rotateReverse 8s alternate infinite;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .glowing {
+        /* position: -webkit-sticky; */
+        /* position: sticky;
+        top: 0; */
+        display: none;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .education-card p {
+        width: 100%;
+    }
+
+
 }

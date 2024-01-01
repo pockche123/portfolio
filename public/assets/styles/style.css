@@ -20,8 +20,8 @@ body {
     background-color: #202731;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
     justify-content: center;
     color: white;
@@ -34,193 +34,30 @@ body {
 
 }
 
-/* .glowing-container {
-        display: flex;
-        flex-direction: row;
-    } */
 
-/* .glowing {
-        position: relative;
-        min-width: 750px;
-        height: 750px;
-        margin: -150px;
-        transform-origin: right;
-        animation: colorChange 5s linear infinite;
-    } */
-
-.glowing:nth-child(even) {
-    transform-origin: left;
+#about,
+#education,
+#skills,
+#portfolio,
+#socials {
+    margin-bottom: 10em;
+    /* position: relative; */
 }
 
-#education {
-    position: relative;
-}
-
-@keyframes colorChange {
-    0% {
-        filter: hue-rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-
-.glowing span {
+#about-link,
+#education-link,
+#skills-link,
+#portfolio-link,
+#socials-link {
     position: absolute;
-    top: calc(80px * var(--i));
-    left: calc(80px * var(--i));
-    bottom: calc(80px * var(--i));
-    right: calc(80px * var(--i));
-}
-
-.glowing span:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -8px;
-    width: 10px;
-    height: 10px;
-    background: #f00;
-    border-radius: 50%;
-}
-
-.glowing span:nth-child(6n+1)::before {
-    background: rgba(134, 255, 0, 1);
-    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-        0 0 40px rgba(134, 255, 0, 1),
-        0 0 60px rgba(134, 255, 0, 1),
-        0 0 80px rgba(134, 255, 0, 1),
-        0 0 0 8px rgba(134, 255, 0, .1);
-}
-
-.glowing span:nth-child(6n+2)::before {
-    background: rgba(255, 214, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-        0 0 40px rgba(255, 214, 0, 1),
-        0 0 60px rgba(255, 214, 0, 1),
-        0 0 80px rgba(255, 214, 0, 1),
-        0 0 0 8px rgba(255, 214, 0, .1);
-}
-
-.glowing span:nth-child(6n+3)::before {
-    background: rgba(0, 226, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-        0 0 40px rgba(0, 226, 255, 1),
-        0 0 60px rgba(0, 226, 255, 1),
-        0 0 80px rgba(0, 226, 255, 1),
-        0 0 0 8px rgba(0, 226, 255, .1);
-}
-
-.glowing span:nth-child(6n+1) {
-    animation: animate 10s alternate infinite;
-
-}
-
-.glowing span:nth-child(6n+2) {
-    animation: animate-reverse 10s alternate infinite;
-
-}
-
-.glowing span:nth-child(6n+3) {
-    animation: animate 8s alternate infinite;
+    z-index: 1;
+    text-decoration: none;
+    color: white;
+    display: none;
+    font-family: 'mario', sans-serif;
 }
 
 
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-@keyframes animate-reverse {
-    0% {
-        transform: rotate(360deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-
-@keyframes rotate360 {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateReverse {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.5);
-    }
-}
-
-.glowing span:nth-child(6n+4)::before {
-    background: rgb(255, 0, 149);
-    box-shadow: 0 0 20px rgba(255, 0, 149, 1),
-        0 0 40px rgba(255, 0, 149, 1),
-        0 0 60px rgba(255, 0, 149, 1),
-        0 0 80px rgba(255, 0, 149, 1),
-        0 0 0 8px rgba(255, 162, 0, .1);
-}
-
-.glowing span:nth-child(6n+5)::before {
-    background: rgb(124, 12, 136);
-    box-shadow: 0 0 20px rgba(124, 12, 136, 1),
-        0 0 40px rgba(124, 12, 136, 1),
-        0 0 60px rgba(124, 12, 136, 1),
-        0 0 80px rgba(124, 12, 136, 1),
-        0 0 0 8px rgba(255, 214, 0, .1);
-}
-
-.glowing span:nth-child(6n+6)::before {
-    background: rgb(255, 251, 0);
-    box-shadow: 0 0 20px rgba(255, 0, 51 1),
-        0 0 40px rgb(195, 255, 0),
-        0 0 60px rgb(212, 255, 0),
-        0 0 80px rgb(255, 242, 0),
-        0 0 0 8px rgba(0, 226, 255, .1);
-}
-
-.glowing span:nth-child(6n+4) {
-    animation: rotate360 10s alternate infinite;
-}
-
-.glowing span:nth-child(6n+5) {
-    animation: rotateReverse 10s alternate infinite;
-}
-
-.glowing span:nth-child(6n+6) {
-    animation: scaleUp 8s alternate infinite;
-}
 
 
 #screen-container {
@@ -249,6 +86,7 @@ body {
     /* z-index: -100; */
 
 }
+
 .layer1 {
     background-image: url('../../img/layered-waves-haikei.svg');
 
@@ -263,25 +101,24 @@ body {
     /* bottom: 0;  */
 }
 
-.info{
+.info {
     position: relative;
 }
 
-#top-wave{
-    position: absolute; 
-    top: 0;
-    z-index: -1;
+#top-wave {
+    position: absolute;
+    top: -10%;
 }
 
-.hidden{
- opacity: 0; 
- transition: all 1s; 
- /* filter: blur(5px);
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    /* filter: blur(5px);
  transform: translateX(-100%); 
  transition: all 1s;  */
 }
 
-.show{
+.show {
 
     opacity: 1;
     /* filter: blur(0); 
@@ -289,32 +126,194 @@ body {
 
 }
 
-@media(prefers-reduced-motion){
-    .hidden{
+@media(prefers-reduced-motion) {
+    .hidden {
         transition: none;
     }
 }
 
 /* For Webkit browsers like Chrome or Safari */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: whitesmoke;
-  border-radius: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: whitesmoke transparent;
+    scrollbar-width: thin;
+    scrollbar-color: whitesmoke transparent;
 }
 
 
 *::-ms-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 *::-ms-scrollbar-thumb {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.info {
+    width: 100%;
+}
+
+label #btn, label #cancel, .sidebar{
+    display: none; 
+}
+
+
+    #check{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+    .info {
+        width: 250vw;
+    }
+
+    #top-wave {
+
+        top: -300px;
+    }
+
+        label #btn, label #cancel, .sidebar{
+    display: block; 
+}
+
+        .sidebar {
+        position: fixed;
+        top: 0;
+        left: -400px;
+        text-decoration: none;
+        width: 400px;
+        height: 100%;
+        background-color:#202731;
+        z-index: 1000; 
+        transition: 0.5s ease;
+        font-size: x-large;
+        /* padding: 2em; */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .sidebar header {
+        font-size: xx-large;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+        background: rgba(117, 110, 121);
+        padding: 1em;
+        padding-top: 3em;
+        user-select: none;
+    }
+ .sidebar ul {
+        list-style-type: none;
+        padding: 0; 
+        margin: 0;
+    } 
+    
+    .sidebar ul li{
+        width: 100%; 
+        display: block;
+    } 
+
+    .sidebar ul  a{
+        text-decoration: none;
+        display: block;
+        height: 100%;
+        width: 100%; 
+        line-height: 100px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        border-bottom: 1px solid black;
+        transition: 0.3s ease-in-out; 
+    }
+
+    .sidebar ul li:hover a {
+        padding-left: 50px;
+    }
+
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    label #btn, label #cancel{
+        position: fixed;
+        cursor: pointer;
+        z-index: 1000; 
+        background-color: #202731;
+        border-radius: 3px; 
+    }
+
+    label #btn{
+        left: 40px; 
+        top: 25px; 
+        font-size: 75px; 
+        color: white;
+        padding: 6px 20px;
+        transition: all .8s ease;
+        border-radius: 10px;
+    }
+
+    label #cancel{
+        z-index: 1111; 
+        left: -100px; 
+        top: 17px; 
+        font-size: 50px; 
+        padding: 4px 9px;
+        color: rgba(117, 110, 121);
+        transition: all .5s ease;
+        border-radius: 10px;
+    }
+
+    #check:checked ~ .sidebar{
+        left: 0;
+    }
+
+    #check:checked ~ label #btn{
+        left: 250px; 
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #check:checked ~ label #cancel{
+        left: 340px; 
+    }
+
+
+    #check:checked ~ section{
+        margin-left: 400px;
+    }
+
+    .sidebar-message{
+        background-color: #BB004B;
+        padding: 1em;
+        margin-top: 3em;
+        line-height: 30px;
+    }
+
+
+
+
+
+
 }
