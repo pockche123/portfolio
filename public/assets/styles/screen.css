@@ -70,13 +70,14 @@
 @media only screen and (max-width: 600px) {
 
 
-/* #screen{
-    width: 1300px;
-} */
+#screen{
+    width: 250vw;
+}
 
 #screen-container{
     display:none;
-}
+  
+} 
 
 }
 
