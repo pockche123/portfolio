@@ -94,6 +94,7 @@
 .icons {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
  }
 
  .portfolio-card:nth-child(3), .portfolio-card:nth-child(4){
@@ -105,11 +106,6 @@
 
 @media only screen and (max-width: 600px) {
 
-.icons{
-   display: grid; 
-   grid-template-columns: repeat(3, 1fr); 
-   
-}
 
 .portfolio-card{
      flex: 0 0 auto;
