@@ -28,11 +28,11 @@
     <div class="sidebar">
         <header>Welcome to my portfolio!</header>
         <ul>
-            <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a></li>
-            <li><a href="#education"><i class="fa-solid fa-suitcase"></i>Experience</a></li>
-            <li><a href="#portfolio"><i class="fa-solid fa-folder-closed"></i>Projects</a></li>
-            <li><a href="#skills"><i class="fa-solid fa-wrench"></i>Skills</a></li>
+            <li><a href="#about" class="link"><i class="fas fa-user"></i>About</a></li>
+            <li><a href="#contact" class="link"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            <li><a href="#education" class="link"><i class="fa-solid fa-suitcase"></i>Experience</a></li>
+            <li><a href="#portfolio" class="link"><i class="fa-solid fa-folder-closed"></i>Projects</a></li>
+            <li><a href="#skills" class="link"><i class="fa-solid fa-wrench"></i>Skills</a></li>
 
         </ul>
         <div class="sidebar-message">Check this out on your computer to see the nav game.</div>
@@ -441,7 +441,19 @@
             instruction.style.display = 'block';
         }
     });
+
 </script>
+    <script>
+  
+    var links = document.querySelectorAll('.link');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.getElementById('check').click();
+        });
+    });
+</script>
+
 
 
 
