@@ -241,10 +241,10 @@
 
 
     .glowing {
-        /* position: -webkit-sticky; */
-        /* position: sticky;
-        top: 0; */
-        display: none;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        /* display: none; */
     }
 
     .education-card {
