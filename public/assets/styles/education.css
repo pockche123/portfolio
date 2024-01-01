@@ -237,18 +237,21 @@
     animation: rotateReverse 8s alternate infinite;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
 
     .glowing {
-        /* position: -webkit-sticky; */
-        /* position: sticky;
-        top: 0; */
-        display: none;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        /* display: none; */
     }
 
     .education-card {
         flex-direction: column;
+    }
+    .education-card-details{
+        width: 100%;
     }
 
     .education-card p {
