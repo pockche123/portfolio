@@ -250,6 +250,9 @@
     .education-card {
         flex-direction: column;
     }
+    .education-card-details{
+        width: 100%;
+    }
 
     .education-card p {
         width: 100%;
