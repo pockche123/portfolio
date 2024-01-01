@@ -41,14 +41,21 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
 .skills-container{
     display: flex;  
     flex-direction: column;
-  margin-left: 70vw;
+  align-items: center;
   font-size: large;
 }
+
+.skills-card:nth-child(2){
+    margin-left: 100px;
+}
+
+
+
 
 #skills{
     padding-top: 2em;
