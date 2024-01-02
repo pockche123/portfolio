@@ -25,7 +25,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 15px;
-
 }
 
 .skills-card li {
@@ -43,15 +42,23 @@
 
 @media only screen and (max-width: 800px) {
 
+    
+
 .skills-container{
     display: flex;  
     flex-direction: column;
   align-items: center;
   font-size: large;
+  text-align: left;
 }
 
-.skills-card:nth-child(2){
+/* .skills-card:nth-child(2){
     margin-left: 100px;
+} */
+
+.skills-card{
+    min-width: 600px;
+    margin-left: 150px;
 }
 
 
