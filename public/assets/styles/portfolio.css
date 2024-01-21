@@ -1,11 +1,11 @@
 .portfolio-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio-card {
-    flex-basis: calc(48% - 0.6rem);
-    /* Adjust the value accordingly */
+    width: calc(48% - 0.6rem);
     margin: 1.2rem;
     background-color: rgb(117, 110, 121);
     box-shadow: 4px 10px 8px rgba(0, 0, 0, 0.7);
@@ -92,35 +92,37 @@
 }
 
 .icons {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
- }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
- .portfolio-card:nth-child(3), .portfolio-card:nth-child(4){
- transition-delay: 200ms;
- }
-    #music-app-image {
-            width: 100%;
+.portfolio-card:nth-child(3),
+.portfolio-card:nth-child(4) {
+    transition-delay: 200ms;
+}
 
-        }
+#music-app-image {
+    width: 100%;
+
+}
 
 
 
 
-        .github-image {
-            transition: 0.3s ease-in-out;
-        }
+.github-image {
+    transition: 0.3s ease-in-out;
+}
 
-        .github-image:hover {
-            transform: scale(1.2)
-        }
+.github-image:hover {
+    transform: scale(1.2)
+}
 
-        
 
-        a {
-            text-decoration: none;
-        }
+
+a {
+    text-decoration: none;
+}
 
 
 
@@ -129,13 +131,12 @@
 @media only screen and (max-width: 800px) {
 
 
-.portfolio-card{
-     flex: 0 0 auto;
-    width: 95%;
-}
+    .portfolio-card {
+        flex: 0 0 auto;
+        width: 95%;
+    }
 
-.portfolio-container{
-    justify-content: center;
+    .portfolio-container {
+        justify-content: center;
+    }
 }
-}
-
